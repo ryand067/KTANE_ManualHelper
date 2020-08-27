@@ -1,0 +1,160 @@
+body {
+	background-color: #000000;
+	font-family: 'Balsamiq Sans', cursive, sans-serif;
+	color: #f5f5dc;
+	padding: 2%;
+	font-size: 100%;
+}
+
+h1 {
+	color: #ffff00;
+    text-align: center;
+}
+
+h2 {
+	color: rgb(180, 180, 20);
+	font-style: italic;
+}
+
+ol {
+	text-align: left;
+}
+
+#container {
+	text-align: center;
+    display: block;
+    width: 25%;
+    float: right;
+    padding-bottom: 2%;
+}
+
+#colors {
+	text-align: left;
+}
+
+.NumberBoxes {
+	background-color: #575757;
+	color: rgba(211, 211, 54, 0.69);
+	font-size: 120%;
+    width: 6ch;
+}
+
+.arrowbuttons {
+	max-width: 8%;
+	height: auto;
+	display: inline-block;
+	overflow: auto;
+}
+
+table,
+th,
+td {
+	border: 1px solid;
+	border-color: #f5f5dc;
+}
+
+#tables {
+	display: inline-block;
+}
+
+#manual {
+    text-align: center;
+    display: block;
+    width: 73%;
+    float: left;
+    min-height: 400px;
+    height: 100vh;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#other {
+	background-color: #000080;
+    display: inline-block;
+}
+
+#other_left {
+    display: block;
+    width: 48%;
+    float: left;
+    background-color: #008000;
+    padding: 0.5%;
+}
+
+#other_right {
+    display: block;
+    width: 48%;
+    float: right;
+    background-color: purple;
+    padding: 0.5%;
+}
+
+.resultBox {
+    color: rgb(180, 180, 20);
+    border: solid;
+    width: 100%;
+    text-align: center;
+}
+
+.textareaClass {
+    background-color: #575757;
+	color: rgba(211, 211, 54, 0.69);
+	font-size: 120%;
+    border-color: #c0c0c0;
+    border-bottom-width: medium;
+}
+
+.BUTTON_CLEAR {
+   background: #FFF700;
+   -webkit-border-radius: 100px;
+   -moz-border-radius: 100px;
+   border-radius: 100px;
+   color: #000000;
+   font-family: Open Sans;
+   font-size: 100%;
+   font-weight: 100;
+   padding: 18px;
+   box-shadow: 1px 1px 20px 0px #FF6700;
+   -webkit-box-shadow: 1px 1px 20px 0px #FF6700;
+   -moz-box-shadow: 1px 1px 20px 0px #FF6700;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.BUTTON_CLEAR:hover {
+   background: #1E62D0;
+   border: solid #337FED 1px;
+   -webkit-border-radius: 100px;
+   -moz-border-radius: 100px;
+   border-radius: 100px;
+   text-decoration: none;
+}
+
+.binaryGo {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:32px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	padding:6px 11px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.binaryGo:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+.binaryGo:active {
+	position:relative;
+	top:1px;
+}
