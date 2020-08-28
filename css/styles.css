@@ -51,6 +51,7 @@ th,
 td {
 	border: 1px solid;
 	border-color: #f5f5dc;
+    text-align: center;
 }
 
 #tables {

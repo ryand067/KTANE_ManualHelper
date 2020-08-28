@@ -173,7 +173,7 @@ function readTextFile(file)
 function splitLines(text) {
     var splitArray = text.split("\n");
     wordsFor5Words = splitArray;
-    //printArray(splitArray);
+    printArray(splitArray);
 }
 
 function printArray(arrayObj) {
@@ -199,7 +199,11 @@ function toggleTable(tableNum) {
 }
 
 function loadData() {
-    readTextFile('./words.txt');
+    alert("WTF");
+	readTextFile('./words.txt');
+	alert("A");
     document.getElementById("showhidetable1").style.display = "none";
+	alert("B");
     document.getElementById("showhidetable2").style.display = "none";
+	alert("C");
 }
