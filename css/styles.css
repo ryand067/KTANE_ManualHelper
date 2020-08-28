@@ -71,6 +71,11 @@ iframe {
     height: 100%;
 }
 
+.tableCrazy {
+    text-align: center;
+    font-size: 70%;
+}
+
 #other {
 	background-color: #000080;
     display: inline-block;

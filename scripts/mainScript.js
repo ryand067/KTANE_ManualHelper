@@ -148,6 +148,8 @@ function clr_fields() {
     document.getElementById('additonResponse').innerHTML = "";
     document.getElementById('word5').value = "";
     document.getElementById('words5resp').innerHTML = "";
+    document.getElementById("showhidetable1").style.display = "none";
+    document.getElementById("showhidetable2").style.display = "none";
 }
 
 function readTextFile(file)
@@ -181,6 +183,23 @@ function printArray(arrayObj) {
     }
 }
 
+function toggleTable(tableNum) {
+    var x;
+    if (tableNum === 1) {
+        x = document.getElementById("showhidetable1");
+    } else {
+        x = document.getElementById("showhidetable2");
+    }
+    
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 function loadData() {
     readTextFile('./words.txt');
+    document.getElementById("showhidetable1").style.display = "none";
+    document.getElementById("showhidetable2").style.display = "none";
 }
