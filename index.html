@@ -7,238 +7,246 @@
         <script type="text/javascript" src="scripts/mainScript.js"></script>
     </head>
     <body onload="loadData()">
-	<div id="manual">
-	<h1>Bomb Game Manual</h1>
-	<marquee>****WOW IS CRUSH COVID AND MEDCARE RETARDED!!!****</marquee>
+        <div id="manual">
+            <h1>Bomb Game Manual</h1>
+            <marquee>****WOW IS CRUSH COVID AND MEDCARE RETARDED!!!****</marquee>
             <iframe src = "https://www.bombmanual.com/web/index.html">
-                Sorry your browser does not support inline frames.
+            Sorry your browser does not support inline frames.
             </iframe>
-			<br><br><br>
-			<div id="other">
-				<h2>Other Modules</h2>
+            <br><br><br>
+            <div id="other">
+                <h2>Other Modules</h2>
                 <div id="other_left">
                     <!--<h2>Subject of Binary</h2>
-                    <p>This module consists of a screen and 5 buttons: &quot;0&quot;, &quot;1&quot;, &quot;R&quot;, &quot;Send&quot;, and &quot;Useless button&quot;.</p>
-                    <p>On the screen you will see a word. Translate each letter of the word into binary with the table below and input it into the module with the &quot;0&quot; and &quot;1&quot; buttons. To submit your input, press the &quot;Send&quot; button. You can also press the &quot;R&quot; button to reset your input.</p>
-                    <p>In this manual, the table have been replaced by a simple function that looks up the codes for you.</p>
-                    <p>If the submitted input is correct, the module will be disarmed. If it is incorrect, a strike will be recorded, your input will be reset, and a new word will be shown.</p>
-                    <p>Letter / Word: &nbsp <input type="text" maxlength="5" size="5" cols="5" class="NumberBoxes" id="binaryText"> &nbsp <button class="binaryGo" onclick="getBinaryVal()">GO</button></p>
-                    <p class="resultBox" id="binaryResponse"></p>
-                    <br>-->
+                        <p>This module consists of a screen and 5 buttons: &quot;0&quot;, &quot;1&quot;, &quot;R&quot;, &quot;Send&quot;, and &quot;Useless button&quot;.</p>
+                        <p>On the screen you will see a word. Translate each letter of the word into binary with the table below and input it into the module with the &quot;0&quot; and &quot;1&quot; buttons. To submit your input, press the &quot;Send&quot; button. You can also press the &quot;R&quot; button to reset your input.</p>
+                        <p>In this manual, the table have been replaced by a simple function that looks up the codes for you.</p>
+                        <p>If the submitted input is correct, the module will be disarmed. If it is incorrect, a strike will be recorded, your input will be reset, and a new word will be shown.</p>
+                        <p>Letter / Word: &nbsp <input type="text" maxlength="5" size="5" cols="5" class="NumberBoxes" id="binaryText"> &nbsp <button class="binaryGo" onclick="getBinaryVal()">GO</button></p>
+                        <p class="resultBox" id="binaryResponse"></p>
+                        <br>-->
                     <h2>Subject of Addition</h2>
                     <p>Compute the sum on the display and enter it using the numbered buttons to solve the module. Use the grey &quot;A&quot; button to cycle through 10 numbers which will need added together. Use the red &quot;C&quot; button to clear your input, and the &quot;+&quot; button to submit it.</p>
                     <p><strong>NOTE: Do NOT prepend &quot;0&quot;s to your number. There will ALWAYS be 10 numbers to add together.</strong></p>
-                    <textarea id="additionTextArea" rows="10" cols="5" class="textareaClass"></textarea><br><br>
+                    <textarea id="additionTextArea" rows="10" cols="5" class="textareaClass"></textarea>
+                    <br><br>
                     <button class="binaryGo" onclick="additionGo()">GO</button>
                     <p class="resultBox" id="additonResponse"></p>
                     <br>
-					<h2>Subject of Crazy Talk</h2>
-					<p><i>Nothing. Literally nothing. Blank. Nada.</i></p>
-					<ol>
-						<li>Text will appear on a display.</li>
-						<li>Find the exact match and the action in the table below.</li>
-						<li>Flip the switch <u>down</u> when the bomb timer has the number before the forward slash in the seconds column.</li>
-						<li>Flip the switch back <u>up</u> when the bomb timer has the number after the forward slash in the seconds column.</li>
-                        </ol>
-                    <p onclick="toggleTable(1)">Click <u>HERE</u> to show / hide the table.</p>
-						<table class="tableCrazy" id="showhidetable1">
-							<tr>
-								<th><b>DISPLAY</b></th>
-								<th>Down</th>
-								<th>Up</th>
-								<th><b>DISPLAY</b></th>
-								<th>Down</th>
-								<th>Up</th>
-							</tr>
-							<tr>
-								<td>← ← → ← → →</td>
-								<td>5</td>
-								<td>4</td>
-								<td>NO REALLY.</td>
-								<td>5</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td>1 3 2 4</td>
-								<td>3</td>
-								<td>2</td>
-								<td>← LEFT → LEFT → RIGHT</td>
-								<td>5</td>
-								<td>6</td>
-							</tr>
-							<tr>
-								<td>LEFT ARROW LEFT WORD RIGHT ARROW LEFT WORD RIGHT ARROW RIGHT WORD</td>
-								<td>5</td>
-								<td>8</td>
-								<td>ONE AND THEN 3 TO 4</td>
-								<td>4</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>BLANK</td>
-								<td>1</td>
-								<td>3</td>
-								<td>STOP TWICE</td>
-								<td>7</td>
-								<td>6</td>
-							</tr>
-							<tr>
-								<td>LITERALLY BLANK</td>
-								<td>1</td>
-								<td>5</td>
-								<td>LEFT</td>
-								<td>6</td>
-								<td>9</td>
-							</tr>
-							<tr>
-								<td>FOR THE LOVE OF ALL THAT IS GOOD AND HOLY PLEASE FULLSTOP FULLSTOP.</td>
-								<td>9</td>
-								<td>0</td>
-								<td>..</td>
-								<td>8</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td>AN ACTUAL LEFT ARROW LITERAL PHRASE</td>
-								<td>5</td>
-								<td>3</td>
-								<td>PERIOD PERIOD</td>
-								<td>8</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td>FOR THE LOVE OF - THE DISPLAY JUST CHANGED, I DIDN'T KNOW THIS MOD COULD DO THAT. DOES IT MENTION THAT IN THE MANUAL?</td>
-								<td>8</td>
-								<td>7</td>
-								<td>THERE ARE THREE WORDS NO PUNCTUATION READY? STOP DOT PERIOD</td>
-								<td>5</td>
-								<td>0</td>
-							</tr>
-							<tr>
-								<td>ALL WORDS ONE THREE TO FOR FOR AS IN THIS IS FOR YOU</td>
-								<td>4</td>
-								<td>0</td>
-								<td>NOVEBMER OSCAR SPACE, LIMA INDIGO TANGO ECHO ROMEO ALPHA LIMA LIMA YANKEE SPACE NOVEMBER OSCAR TANGO HOTEL INDEGO NOVEMBER GOLF</td>
-								<td>2</td>
-								<td>9</td>
-							</tr>
-							<tr>
-								<td>LITERALLY NOTHING</td>
-								<td>1</td>
-								<td>4</td>
-								<td>FIVE WORDS THREE WORDS THE PUNCTUATION FULLSTOP</td>
-								<td>1</td>
-								<td>9</td>
-							</tr>
-							<tr>
-								<td>NO, LITERALLY NOTHING</td>
-								<td>2</td>
-								<td>5</td>
-								<td>THE PHRASE: THE PUNCTUATION FULLSTOP</td>
-								<td>9</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td>THE WORD LEFT</td>
-								<td>7</td>
-								<td>0</td>
-								<td>EMPTY SPACE</td>
-								<td>1</td>
-								<td>6</td>
-							</tr>
-                            <tr>
-                                <td>HOLD ON IT'S BLANK</td>
-                                <td>1</td>
-                                <td>9</td>
-                                <td>ONE THREE TWO FOUR</td>
-                                <td>3</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>SEVEN WORDS FIVE WORDS THREE WORDS THE PUNCTUATION FULLSTOP</td>
-                                <td>0</td>
-                                <td>5</td>
-                                <td>IT'S SHOWING NOTHING</td>
-                                <td>2</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>THE PHRASE THE WORD STOP TWICE</td>
-                                <td>9</td>
-                                <td>1</td>
-                                <td>LIMA ECHO FOXTROT TANGO SPACE ALPHA ROMEO ROMEO OSCAR RISKY SPACE SIERRA YANKEE MIKE BRAVO OSCAR LIMA</td>
-                                <td>1</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>THE FOLLOWING SENTENCE THE WORD NOTHING</td>
-                                <td>2</td>
-                                <td>7</td>
-                                <td>ONE 3 2 4</td>
-                                <td>3</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>ONE THREE TO FOR</td>
-                                <td>3</td>
-                                <td>9</td>
-                                <td>STOP.</td>
-                                <td>7</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>THREE WORDS THE WORD STOP</td>
-                                <td>7</td>
-                                <td>3</td>
-                                <td>.PERIOD</td>
-                                <td>8</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>DISREGARD WHAT I JUST SAID. FOUR WORDS, NO PUNCTUATION. ONE THREE 2 4.</td>
-                                <td>3</td>
-                                <td>1</td>
-                                <td>NO REALLY STOP</td>
-                                <td>5</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>1 3 2 FOR</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>1 3 TOO 4</td>
-                                <td>2</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>DISREGARD WHAT I JUST SAID. TWO WORDS THEN TWO DIGITS. ONE THREE 2 4.</td>
-                                <td>0</td>
-                                <td>8</td>
-                                <td>PERIOD TWICE</td>
-                                <td>8</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>WE JUST BLEW UP</td>
-                                <td>4</td>
-                                <td>2</td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-						</table>
+                    <h2>Subject of Crazy Talk</h2>
+                    <p><i>Nothing. Literally nothing. Blank. Nada.</i></p>
+                    <ol>
+                        <li>Text will appear on a display.</li>
+                        <li>Find the exact match and the action in the table below.</li>
+                        <li>Flip the switch <u>down</u> when the bomb timer has the number before the forward slash in the seconds column.</li>
+                        <li>Flip the switch back <u>up</u> when the bomb timer has the number after the forward slash in the seconds column.</li>
+                    </ol>
+                    <p>To view the table, see <i>Table 1: CrazyTalk Table</i></p>
+                    <br>
+                    <h2>Tables</h2>
+                    <p onclick="toggleTable(1)"><img alt="right arrow" src="images/rightArrow.png" class="clickableArrows">&nbsp TABLE 1: CrazyTalk Table</p>
+                    <!--<iframe src = "https://ktane.timwi.de/HTML/Crazy%20Talk.html" id="showhidetable1">
+                    Sorry your browser does not support inline frames.
+                    </iframe>-->
+                    <!--<table class="tableCrazy" id="showhidetable1">
+                        <tr>
+                        	<th><b>DISPLAY</b></th>
+                        	<th>Down</th>
+                        	<th>Up</th>
+                        	<th><b>DISPLAY</b></th>
+                        	<th>Down</th>
+                        	<th>Up</th>
+                        </tr>
+                        <tr>
+                        	<td>← ← → ← → →</td>
+                        	<td>5</td>
+                        	<td>4</td>
+                        	<td>NO REALLY.</td>
+                        	<td>5</td>
+                        	<td>2</td>
+                        </tr>
+                        <tr>
+                        	<td>1 3 2 4</td>
+                        	<td>3</td>
+                        	<td>2</td>
+                        	<td>← LEFT → LEFT → RIGHT</td>
+                        	<td>5</td>
+                        	<td>6</td>
+                        </tr>
+                        <tr>
+                        	<td>LEFT ARROW LEFT WORD RIGHT ARROW LEFT WORD RIGHT ARROW RIGHT WORD</td>
+                        	<td>5</td>
+                        	<td>8</td>
+                        	<td>ONE AND THEN 3 TO 4</td>
+                        	<td>4</td>
+                        	<td>7</td>
+                        </tr>
+                        <tr>
+                        	<td>BLANK</td>
+                        	<td>1</td>
+                        	<td>3</td>
+                        	<td>STOP TWICE</td>
+                        	<td>7</td>
+                        	<td>6</td>
+                        </tr>
+                        <tr>
+                        	<td>LITERALLY BLANK</td>
+                        	<td>1</td>
+                        	<td>5</td>
+                        	<td>LEFT</td>
+                        	<td>6</td>
+                        	<td>9</td>
+                        </tr>
+                        <tr>
+                        	<td>FOR THE LOVE OF ALL THAT IS GOOD AND HOLY PLEASE FULLSTOP FULLSTOP.</td>
+                        	<td>9</td>
+                        	<td>0</td>
+                        	<td>..</td>
+                        	<td>8</td>
+                        	<td>5</td>
+                        </tr>
+                        <tr>
+                        	<td>AN ACTUAL LEFT ARROW LITERAL PHRASE</td>
+                        	<td>5</td>
+                        	<td>3</td>
+                        	<td>PERIOD PERIOD</td>
+                        	<td>8</td>
+                        	<td>2</td>
+                        </tr>
+                        <tr>
+                        	<td>FOR THE LOVE OF - THE DISPLAY JUST CHANGED, I DIDN'T KNOW THIS MOD COULD DO THAT. DOES IT MENTION THAT IN THE MANUAL?</td>
+                        	<td>8</td>
+                        	<td>7</td>
+                        	<td>THERE ARE THREE WORDS NO PUNCTUATION READY? STOP DOT PERIOD</td>
+                        	<td>5</td>
+                        	<td>0</td>
+                        </tr>
+                        <tr>
+                        	<td>ALL WORDS ONE THREE TO FOR FOR AS IN THIS IS FOR YOU</td>
+                        	<td>4</td>
+                        	<td>0</td>
+                        	<td>NOVEBMER OSCAR SPACE, LIMA INDIGO TANGO ECHO ROMEO ALPHA LIMA LIMA YANKEE SPACE NOVEMBER OSCAR TANGO HOTEL INDEGO NOVEMBER GOLF</td>
+                        	<td>2</td>
+                        	<td>9</td>
+                        </tr>
+                        <tr>
+                        	<td>LITERALLY NOTHING</td>
+                        	<td>1</td>
+                        	<td>4</td>
+                        	<td>FIVE WORDS THREE WORDS THE PUNCTUATION FULLSTOP</td>
+                        	<td>1</td>
+                        	<td>9</td>
+                        </tr>
+                        <tr>
+                        	<td>NO, LITERALLY NOTHING</td>
+                        	<td>2</td>
+                        	<td>5</td>
+                        	<td>THE PHRASE: THE PUNCTUATION FULLSTOP</td>
+                        	<td>9</td>
+                        	<td>3</td>
+                        </tr>
+                        <tr>
+                        	<td>THE WORD LEFT</td>
+                        	<td>7</td>
+                        	<td>0</td>
+                        	<td>EMPTY SPACE</td>
+                        	<td>1</td>
+                        	<td>6</td>
+                        </tr>
+                        <tr>
+                            <td>HOLD ON IT'S BLANK</td>
+                            <td>1</td>
+                            <td>9</td>
+                            <td>ONE THREE TWO FOUR</td>
+                            <td>3</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>SEVEN WORDS FIVE WORDS THREE WORDS THE PUNCTUATION FULLSTOP</td>
+                            <td>0</td>
+                            <td>5</td>
+                            <td>IT'S SHOWING NOTHING</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>THE PHRASE THE WORD STOP TWICE</td>
+                            <td>9</td>
+                            <td>1</td>
+                            <td>LIMA ECHO FOXTROT TANGO SPACE ALPHA ROMEO ROMEO OSCAR RISKY SPACE SIERRA YANKEE MIKE BRAVO OSCAR LIMA</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>THE FOLLOWING SENTENCE THE WORD NOTHING</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td>ONE 3 2 4</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>ONE THREE TO FOR</td>
+                            <td>3</td>
+                            <td>9</td>
+                            <td>STOP.</td>
+                            <td>7</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>THREE WORDS THE WORD STOP</td>
+                            <td>7</td>
+                            <td>3</td>
+                            <td>.PERIOD</td>
+                            <td>8</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>DISREGARD WHAT I JUST SAID. FOUR WORDS, NO PUNCTUATION. ONE THREE 2 4.</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>NO REALLY STOP</td>
+                            <td>5</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1 3 2 FOR</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1 3 TOO 4</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>DISREGARD WHAT I JUST SAID. TWO WORDS THEN TWO DIGITS. ONE THREE 2 4.</td>
+                            <td>0</td>
+                            <td>8</td>
+                            <td>PERIOD TWICE</td>
+                            <td>8</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>WE JUST BLEW UP</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </table>
+                    <br>-->
                 </div>
                 <div id="other_right">
                     <!--<h2>Subject of Chicken Nuggets</h2>
-                    <p>You are a homeless man who recently got hired at the small restaurant down the street called McDonald's&reg;.</p>
-                    <p>The McDonald's&reg; corporation sells Chicken Nuggets in packs of six, nine, and twenty; all of which relate to the corresponding buttons in the bottom row in the previously mentioned order.</p>
-                    <p>A customer will order a certain amount of Chicken Nuggets as shown in black text, and you must give him his exact order.</p>
-                    <p>To add to your current nugget amount, press their corresponding buttons. Press the button on the top to give your current nugget amount to the customer.</p>
-                    <p>If the customer wants an amount of chicken nuggets that is simply impossible to make, then hold the button to drown the customer and get a bonus check by your boss.</p>
-                    <p>If the customer receives too many chicken nuggets, he dies of obesity. If he receives too little, he will starve to death. Both scenarios will result in your termination.</p>
-                    <p># of Chicken Nuggets Requested: &nbsp; <input type="text" maxlength="3" size="3" cols="3" class="NumberBoxes" id="chickNugs"> &nbsp; <button class="binaryGo" onclick="chickenNuggets()">GO</button></p>
-                    <p class="resultBox" id="chickNugsRes"></p>
-                    <br>-->
+                        <p>You are a homeless man who recently got hired at the small restaurant down the street called McDonald's&reg;.</p>
+                        <p>The McDonald's&reg; corporation sells Chicken Nuggets in packs of six, nine, and twenty; all of which relate to the corresponding buttons in the bottom row in the previously mentioned order.</p>
+                        <p>A customer will order a certain amount of Chicken Nuggets as shown in black text, and you must give him his exact order.</p>
+                        <p>To add to your current nugget amount, press their corresponding buttons. Press the button on the top to give your current nugget amount to the customer.</p>
+                        <p>If the customer wants an amount of chicken nuggets that is simply impossible to make, then hold the button to drown the customer and get a bonus check by your boss.</p>
+                        <p>If the customer receives too many chicken nuggets, he dies of obesity. If he receives too little, he will starve to death. Both scenarios will result in your termination.</p>
+                        <p># of Chicken Nuggets Requested: &nbsp; <input type="text" maxlength="3" size="3" cols="3" class="NumberBoxes" id="chickNugs"> &nbsp; <button class="binaryGo" onclick="chickenNuggets()">GO</button></p>
+                        <p class="resultBox" id="chickNugsRes"></p>
+                        <br>-->
                     <h2>Subject of 1,000 Words</h2>
                     <p>The module contains 5 displays that spell out 5 letter words. Determine if the word shown is in the manual table. Press <strong>YES</strong> if the word is in the munual table. If not press <strong>NO</strong>. Answer five times in a row correctly to solve the module. You will get a strike if one or more of the answers you sent are incorrect.</p>
                     <p>For this manual helper, since the list is so long, the giant table have been replaced with a look-up function. Simply type the word in and recieve a &quot;YES&quot; or &quot;NO&quot; answer to relay to the diffuser.</p>
@@ -246,192 +254,196 @@
                     <p>Word: &nbsp; <input type="text" maxlength="5" size="5" cols="5" class="NumberBoxes" id="word5"> &nbsp; <button class="binaryGo" onclick="findWord()">GO</button></p>
                     <p class="resultBox" id="words5resp"></p>
                     <br>
-                    <h2>Subject of Crazy Talk Cont...</h2>
-                    <p onclick="toggleTable(2)">Click <u>HERE</u> to show / hide the table.</p>
-                    <table class="tableCrazy" id="showhidetable2">
-                        <tr>
-                            <th><b>DISPLAY</b></th>
-                            <th>Down</th>
-                            <th>Up</th>
-                            <th><b>DISPLAY</b></th>
-                            <th>Down</th>
-                            <th>Up</th>
-                        </tr>
-                        <tr>
-                            <td>1 3 TOO WITH 2 OHS FOUR</td>
-                            <td>4</td>
-                            <td>2</td>
-                            <td>1 3 TO 4</td>
-                            <td>3</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>STOP DOT PERIOD</td>
-                            <td>5</td>
-                            <td>0</td>
-                            <td>LEFT LEFT RIGHT LEFT RIGHT RIGHT</td>
-                            <td>6</td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>IT LITERALLY SAYS THE WORD ONE AND THEN THE NUMBERS 2 3 4</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>ONE IN LETTERS 3 2 4 IN NUMBERS</td>
-                            <td>3</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>WAIT FORGET EVERYTHING I JUST SAID, TWO WORDS THEN TWO SYMBOLS THEN TWO WORDS: ← ← RIGHT LEFT → →</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1 THREE TWO FOUR</td>
-                            <td>3</td>
-                            <td>6</td>
-                        </tr>
-                        <tr>
-                            <td>PERIOD</td>
-                            <td>7</td>
-                            <td>9</td>
-                            <td>.STOP</td>
-                            <td>7</td>
-                            <td>8</td>
-                        </tr>
-                        <tr>
-                            <td>NOVEBMER OSCAR SPACE, LIMA INDIA TANGO ECHO ROMEO ALPHA LIMA LIMA YANKEE SPACE NOVEMBER OSCAR TANGO HOTEL INDIA NOVEMBER GOLF</td>
-                            <td>0</td>
-                            <td>7</td>
-                            <td>LIMA ECHO FOXTROT TANGO SPACE ALPHA ROMEO ROMEO OSCAR WHISKEY SPACE SIERRA YANKEE MIKE BRAVO OSCAR LIMA</td>
-                            <td>6</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>NOTHING</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>THERE'S NOTHING</td>
-                            <td>1</td>
-                            <td>8</td>
-                        </tr>
-                        <tr>
-                            <td>STOP STOP</td>
-                            <td>7</td>
-                            <td>5</td>
-                            <td>RIGHT ALL IN WORDS STARTING NOW ONE TWO THREE FOUR</td>
-                            <td>4</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>THE PHRASE THE WORD LEFT</td>
-                            <td>7</td>
-                            <td>1</td>
-                            <td>LEFT ARROW SYMBOL TWICE THEN THE WORDS RIGHT LEFT RIGHT THEN A RIGHT ARROW SYMBOL</td>
-                            <td>5</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>LEFT LEFT RIGHT ← RIGHT →</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>NO COMMA LITERALLY NOTHING</td>
-                            <td>2</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>HOLD ON CRAZY TALK WHILE I DO THIS NEEDY</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>THIS ONE IS ALL ARROW SYMBOLS NO WORDS</td>
-                            <td>2</td>
-                            <td>8</td>
-                        </tr>
-                        <tr>
-                            <td>←</td>
-                            <td>6</td>
-                            <td>3</td>
-                            <td>THE WORD STOP TWICE</td>
-                            <td>9</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>← ← RIGHT LEFT → →</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>THE PUNCTUATION FULLSTOP</td>
-                            <td>9</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>1 3 TOO WITH TWO OS 4</td>
-                            <td>4</td>
-                            <td>1</td>
-                            <td>THREE WORDS THE PUNCTUATION FULLSTOP</td>
-                            <td>9</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>OK WORD FOR WORD LEFT ARROW SYMBOL TWICE THEN THE WORDS RIGHT LEFT RIGHT THEN A RIGHT ARROW SYMBOL</td>
-                            <td>6</td>
-                            <td>0</td>
-                            <td>DOT DOT</td>
-                            <td>8</td>
-                            <td>6</td>
-                        </tr>
-                        <tr>
-                            <td>LEFT ARROW</td>
-                            <td>6</td>
-                            <td>8</td>
-                            <td>AFTER I SAY BEEP FIND THIS PHRASE WORD FOR WORD BEEP AN ACTUAL LEFT ARROW</td>
-                            <td>7</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>ONE THREE 2 WITH TWO OHS 4</td>
-                            <td>4</td>
-                            <td>3</td>
-                            <td>LEFT ARROW SYMBOL</td>
-                            <td>6</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>AN ACTUAL LEFT ARROW</td>
-                            <td>6</td>
-                            <td>2</td>
-                            <td>THAT'S WHAT IT'S SHOWING</td>
-                            <td>2</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>THE PHRASE THE WORD NOTHING</td>
-                            <td>2</td>
-                            <td>6</td>
-                            <td>THE WORD ONE AND THEN THE NUMBERS 3 2 4</td>
-                            <td>4</td>
-                            <td>8</td>
-                        </tr>
-                        <tr>
-                            <td>ONE 3 2 FOUR</td>
-                            <td>3</td>
-                            <td>8</td>
-                            <td>ONE WORD THEN PUNCTUATION. STOP STOP.</td>
-                            <td>0</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>THE WORD BLANK</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>FULLSTOP FULLSTOP</td>
-                            <td>8</td>
-                            <td>4</td>
-                        </tr>
-                    </table>
-                    <br>
+                    <!--<h2>Subject of Crazy Talk Cont...</h2>
+                        <p onclick="toggleTable(2)">Click <u>HERE</u> to show / hide the table.</p>
+                        <table class="tableCrazy" id="showhidetable2">
+                            <tr>
+                                <th><b>DISPLAY</b></th>
+                                <th>Down</th>
+                                <th>Up</th>
+                                <th><b>DISPLAY</b></th>
+                                <th>Down</th>
+                                <th>Up</th>
+                            </tr>
+                            <tr>
+                                <td>1 3 TOO WITH 2 OHS FOUR</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>1 3 TO 4</td>
+                                <td>3</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>STOP DOT PERIOD</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>LEFT LEFT RIGHT LEFT RIGHT RIGHT</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>IT LITERALLY SAYS THE WORD ONE AND THEN THE NUMBERS 2 3 4</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>ONE IN LETTERS 3 2 4 IN NUMBERS</td>
+                                <td>3</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>WAIT FORGET EVERYTHING I JUST SAID, TWO WORDS THEN TWO SYMBOLS THEN TWO WORDS: ← ← RIGHT LEFT → →</td>
+                                <td>1</td>
+                                <td>6</td>
+                                <td>1 THREE TWO FOUR</td>
+                                <td>3</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>PERIOD</td>
+                                <td>7</td>
+                                <td>9</td>
+                                <td>.STOP</td>
+                                <td>7</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>NOVEBMER OSCAR SPACE, LIMA INDIA TANGO ECHO ROMEO ALPHA LIMA LIMA YANKEE SPACE NOVEMBER OSCAR TANGO HOTEL INDIA NOVEMBER GOLF</td>
+                                <td>0</td>
+                                <td>7</td>
+                                <td>LIMA ECHO FOXTROT TANGO SPACE ALPHA ROMEO ROMEO OSCAR WHISKEY SPACE SIERRA YANKEE MIKE BRAVO OSCAR LIMA</td>
+                                <td>6</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>NOTHING</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>THERE'S NOTHING</td>
+                                <td>1</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>STOP STOP</td>
+                                <td>7</td>
+                                <td>5</td>
+                                <td>RIGHT ALL IN WORDS STARTING NOW ONE TWO THREE FOUR</td>
+                                <td>4</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>THE PHRASE THE WORD LEFT</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>LEFT ARROW SYMBOL TWICE THEN THE WORDS RIGHT LEFT RIGHT THEN A RIGHT ARROW SYMBOL</td>
+                                <td>5</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>LEFT LEFT RIGHT ← RIGHT →</td>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>NO COMMA LITERALLY NOTHING</td>
+                                <td>2</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>HOLD ON CRAZY TALK WHILE I DO THIS NEEDY</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>THIS ONE IS ALL ARROW SYMBOLS NO WORDS</td>
+                                <td>2</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>←</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>THE WORD STOP TWICE</td>
+                                <td>9</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>← ← RIGHT LEFT → →</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>THE PUNCTUATION FULLSTOP</td>
+                                <td>9</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>1 3 TOO WITH TWO OS 4</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>THREE WORDS THE PUNCTUATION FULLSTOP</td>
+                                <td>9</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>OK WORD FOR WORD LEFT ARROW SYMBOL TWICE THEN THE WORDS RIGHT LEFT RIGHT THEN A RIGHT ARROW SYMBOL</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>DOT DOT</td>
+                                <td>8</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>LEFT ARROW</td>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>AFTER I SAY BEEP FIND THIS PHRASE WORD FOR WORD BEEP AN ACTUAL LEFT ARROW</td>
+                                <td>7</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>ONE THREE 2 WITH TWO OHS 4</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>LEFT ARROW SYMBOL</td>
+                                <td>6</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>AN ACTUAL LEFT ARROW</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>THAT'S WHAT IT'S SHOWING</td>
+                                <td>2</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>THE PHRASE THE WORD NOTHING</td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>THE WORD ONE AND THEN THE NUMBERS 3 2 4</td>
+                                <td>4</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>ONE 3 2 FOUR</td>
+                                <td>3</td>
+                                <td>8</td>
+                                <td>ONE WORD THEN PUNCTUATION. STOP STOP.</td>
+                                <td>0</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>THE WORD BLANK</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>FULLSTOP FULLSTOP</td>
+                                <td>8</td>
+                                <td>4</td>
+                            </tr>
+                        </table>
+                        <br>-->
                 </div>
                 <br>
+                <iframe src = "https://ktane.timwi.de/HTML/Crazy%20Talk.html" id="showhidetable1">
+                    Sorry your browser does not support inline frames.
+                    </iframe>
                 <br>
-			</div>
-        <br>
+                <br>
+            </div>
+            <br>
         </div>
         <div id="container">
             <h2>Memory</h2>
@@ -447,72 +459,72 @@
             <h2>Complicated Wires</h2>
             <p>In the section below, refer to the table to decide what to do with each wire, since the venn-diagram provided in the manual is very hard to understand.</p>
             <div id="tables">
-            	<table>
-            		<tr>
-            			<th> </th>
-            			<th>None</th>
-            			<th>LED</th>
-            			<th>Star</th>
-            			<th>LED & Star</th>
-            		</tr>
-            		<tr>
-            			<th style="color: #ffffff;">White</th>
-            			<td>C</td>
-            			<td>D</td>
-            			<td>C</td>
-            			<td>B</td>
-            		</tr>
-            		<tr>
-            			<th style="color: #ff0000;">Red</th>
-            			<td>S</td>
-            			<td>B</td>
-            			<td>C</td>
-            			<td>B</td>
-            		</tr>
-            		<tr>
-            			<th style="color: #0000ff;">Blue</th>
-            			<td>S</td>
-            			<td>P</td>
-            			<td>D</td>
-            			<td>P</td>
-            		</tr>
-            		<tr>
-            			<th><span style="color: #ff0000;">Red</span> <span style="color: #ffffff;">& </span><span style="color: #0000ff;">Blue</span></th>
-            			<td>S</td>
-            			<td>S</td>
-            			<td>P</td>
-            			<td>D</td>
-            		</tr>
-            	</table>
-            	<p>&nbsp</p>
-            	<table>
-            		<tr>
-            			<th>Letter</th>
-            			<th>Meaning</th>
-            		</tr>
-            		<tr>
-            			<td>C</td>
-            			<td>Cut the wire</td>
-            		</tr>
-            		<tr>
-            			<td>D</td>
-            			<td>Do <b>NOT</b> cut the wire</td>
-            		</tr>
-            		<tr>
-            			<td>S</td>
-            			<td>Cut the wire if the serial number ends in an even digit</td>
-            		</tr>
-            		<tr>
-            			<td>B</td>
-            			<td>Cut the wire if the bomb has 2 or more batteries</td>
-            		</tr>
-            		<tr>
-            			<td>P</td>
-            			<td>Cut the wire if the bomb has a parallel port</td>
-            		</tr>
-            	</table>
+                <table>
+                    <tr>
+                        <th> </th>
+                        <th>None</th>
+                        <th>LED</th>
+                        <th>Star</th>
+                        <th>LED & Star</th>
+                    </tr>
+                    <tr>
+                        <th style="color: #ffffff;">White</th>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>C</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #ff0000;">Red</th>
+                        <td>S</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #0000ff;">Blue</th>
+                        <td>S</td>
+                        <td>P</td>
+                        <td>D</td>
+                        <td>P</td>
+                    </tr>
+                    <tr>
+                        <th><span style="color: #ff0000;">Red</span> <span style="color: #ffffff;">& </span><span style="color: #0000ff;">Blue</span></th>
+                        <td>S</td>
+                        <td>S</td>
+                        <td>P</td>
+                        <td>D</td>
+                    </tr>
+                </table>
+                <p>&nbsp</p>
+                <table>
+                    <tr>
+                        <th>Letter</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>Cut the wire</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>Do <b>NOT</b> cut the wire</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>Cut the wire if the serial number ends in an even digit</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>Cut the wire if the bomb has 2 or more batteries</td>
+                    </tr>
+                    <tr>
+                        <td>P</td>
+                        <td>Cut the wire if the bomb has a parallel port</td>
+                    </tr>
+                </table>
             </div>
-			<p><button class="BUTTON_CLEAR" onclick="clr_fields()">CLR</button></p>
+            <p><button class="BUTTON_CLEAR" onclick="clr_fields()">CLR</button></p>
         </div>
     </body>
 </html>
