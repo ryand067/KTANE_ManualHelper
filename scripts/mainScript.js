@@ -199,11 +199,7 @@ function toggleTable(tableNum) {
 }
 
 function loadData() {
-    alert("WTF");
 	readTextFile('./words.txt');
-	alert("A");
     document.getElementById("showhidetable1").style.display = "none";
-	alert("B");
     document.getElementById("showhidetable2").style.display = "none";
-	alert("C");
 }
