@@ -77,7 +77,7 @@ td {
 #showhidetable1 {
     text-align: center;
     display: block;
-    width: 70%;
+    width: 100%;
     float: left;
     height: 20vh:
 }
@@ -93,7 +93,7 @@ iframe {
 }
 
 #other {
-	background-color: #000080;
+	/*background-color: #000080;*/
     display: inline-block;
 }
 
@@ -101,7 +101,7 @@ iframe {
     display: block;
     width: 48%;
     float: left;
-    background-color: #008000;
+    /*background-color: #008000;*/
     padding: 0.5%;
 }
 
@@ -109,9 +109,8 @@ iframe {
     display: block;
     width: 48%;
     float: right;
-    background-color: purple;
+    /*background-color: purple;*/
     padding: 0.5%;
-    /*height: 73%*/
 }
 
 .resultBox {
