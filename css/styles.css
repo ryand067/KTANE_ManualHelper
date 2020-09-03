@@ -1,3 +1,4 @@
+/*Main Body Style*/
 body {
 	background-color: #000000;
 	font-family: 'Balsamiq Sans', cursive, sans-serif;
@@ -6,6 +7,10 @@ body {
 	font-size: 100%;
 }
 
+/*Heading Styles
+	-H1: Section Headings
+	-H2: Helper Names Headings
+*/
 h1 {
 	color: #ffff00;
     text-align: center;
@@ -20,6 +25,7 @@ ol {
 	text-align: left;
 }
 
+/*Right side of the page: The Helper Modules Styles*/
 #container {
 	text-align: center;
     display: block;
@@ -32,6 +38,7 @@ ol {
 	text-align: left;
 }
 
+/*Styles for the objects associated with the 'Sequence of Wires' Helper*/
 .NumberBoxes {
 	background-color: #575757;
 	color: rgba(211, 211, 54, 0.69);
@@ -53,6 +60,7 @@ ol {
     overflow: auto;
 }
 
+/*Table Styles: Particularly for the 'Complicated Wires' Helper*/
 table,
 th,
 td {
@@ -65,6 +73,7 @@ td {
 	display: inline-block;
 }
 
+/*Main Original Manual Styles*/
 #manual {
     text-align: center;
     display: block;
@@ -74,6 +83,7 @@ td {
     height: 100vh;
 }
 
+/*CrazyTalk Sub-Manual*/
 #showhidetable1 {
     text-align: center;
     display: block;
@@ -87,11 +97,11 @@ iframe {
     height: 100%;
 }
 
-.tableCrazy {
-    text-align: center;
-    font-size: 70%;
-}
-
+/*Styles for the Other Modules and Appendixes
+	-other: Appendixes and Left and Right Screens for Modded Modules
+	-other_left: left-hand side of Modded Modules including Addition and CrazyTalk
+	-other_right: right-hand side of the Modded Modules including 1,000 Words
+*/
 #other {
 	/*background-color: #000080;*/
     display: inline-block;
@@ -113,6 +123,7 @@ iframe {
     padding: 0.5%;
 }
 
+/*Styles for the returned results from the Addition and 1,000 Words Modules*/
 .resultBox {
     color: rgb(180, 180, 20);
     border: solid;
@@ -120,6 +131,7 @@ iframe {
     text-align: center;
 }
 
+/*Text Area Styles for the 'Addition' and 'Memory' Modules*/
 .textareaClass {
     background-color: #575757;
 	color: rgba(211, 211, 54, 0.69);
@@ -128,6 +140,8 @@ iframe {
     border-bottom-width: medium;
 }
 
+
+/*Clear Button Styles*/
 .BUTTON_CLEAR {
    background: #FFF700;
    -webkit-border-radius: 100px;
@@ -156,6 +170,7 @@ iframe {
    text-decoration: none;
 }
 
+/*Modules GO buttons Styles*/
 .binaryGo {
 	box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);

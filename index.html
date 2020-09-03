@@ -1,26 +1,37 @@
 <!--<!DOCTYPE html>-->
 <html>
     <head>
+		<!--Head Information such as Title and StyleSheet-->
         <title>Bomb Game Manual</title>
         <link rel="stylesheet" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
         <script type="text/javascript" src="scripts/mainScript.js"></script>
     </head>
+	
+	<!--Body: Load the words into an Array. Do so by calling loadData() when the body loads-->
     <body onload="loadData()">
         <div id="manual">
             <h1>Bomb Game Manual</h1>
             <marquee>****WOW IS CRUSH COVID AND MEDCARE RETARDED!!!****</marquee>
+			
+			<!--IFrame to hold the main Manual Page... Contains Original Manual data; no helpers and no mods.-->
             <iframe src = "https://www.bombmanual.com/web/index.html">
             Sorry your browser does not support inline frames.
             </iframe>
             <br><br><br>
-            <div id="other">
+            
+			<!--DIV to hold Non-Helping stuff like Appendixes, Help Info, or Mod Modules-->
+			<div id="other">
+			
+				<!--Appendix A: Tables:: Holds the different tables needed for the different modded modules, like CrazyTalk-->
 				<h1>Appendix A: Tables</h1>
 				<p onclick="toggleTable(1)"><img alt="right arrow" src="images/rightArrow.png" class="clickableArrows">&nbsp TABLE 1: CrazyTalk Table</p>
 					<iframe src = "https://ktane.timwi.de/HTML/Crazy%20Talk.html" id="showhidetable1">
                     Sorry your browser does not support inline frames.
                     </iframe>
                     <br><br><br>
+					
+				<!--Modded Modules-->
                 <h1>Other Modules</h1>
 				<br>
                 <div id="other_left">
@@ -32,6 +43,8 @@
                         <p>Letter / Word: &nbsp <input type="text" maxlength="5" size="5" cols="5" class="NumberBoxes" id="binaryText"> &nbsp <button class="binaryGo" onclick="getBinaryVal()">GO</button></p>
                         <p class="resultBox" id="binaryResponse"></p>
                         <br>-->
+						
+					<!--Subject of Addition-->
                     <h2>Subject of Addition</h2>
                     <p>Compute the sum on the display and enter it using the numbered buttons to solve the module. Use the grey &quot;A&quot; button to cycle through 10 numbers which will need added together. Use the red &quot;C&quot; button to clear your input, and the &quot;+&quot; button to submit it.</p>
                     <p><strong>NOTE: Do NOT prepend &quot;0&quot;s to your number. There will ALWAYS be 10 numbers to add together.</strong></p>
@@ -40,6 +53,8 @@
                     <button class="binaryGo" onclick="additionGo()">GO</button>
                     <p class="resultBox" id="additonResponse"></p>
                     <br>
+					
+					<!--Subject of CrazyTalk-->
 					<h2>Subject of Crazy Talk</h2>
                     <p><i>Nothing. Literally nothing. Blank. Nada.</i></p>
                     <ol>
@@ -62,6 +77,8 @@
                         <p># of Chicken Nuggets Requested: &nbsp; <input type="text" maxlength="3" size="3" cols="3" class="NumberBoxes" id="chickNugs"> &nbsp; <button class="binaryGo" onclick="chickenNuggets()">GO</button></p>
                         <p class="resultBox" id="chickNugsRes"></p>
                         <br>-->
+						
+					<!--Subject of 1,000 Words-->
                     <h2>Subject of 1,000 Words</h2>
                     <p>The module contains 5 displays that spell out 5 letter words. Determine if the word shown is in the manual table. Press <strong>YES</strong> if the word is in the munual table. If not press <strong>NO</strong>. Answer five times in a row correctly to solve the module. You will get a strike if one or more of the answers you sent are incorrect.</p>
                     <p>For this manual helper, since the list is so long, the giant table have been replaced with a look-up function. Simply type the word in and recieve a &quot;YES&quot; or &quot;NO&quot; answer to relay to the diffuser.</p>
@@ -76,10 +93,16 @@
             </div>
             <br>
         </div>
+		
+		<!--Main Container to hold Origina Modules Helper Sections Like the Complicated Wires Helper-->
         <div id="container">
+		
+			<!--Memory Helper-->
             <h2>Memory</h2>
             <p><i>EXAMPLE: 42 = Number 4, Position 2</i></p>
             <textarea id="MemoryTextArea" rows="5" cols="4" class="textareaClass"></textarea>
+			
+			<!--Sequence of Wires Helper-->
             <h2>Sequence of Wires</h2>
             <p>In the section below, place the number of each colored wire occurances to keep track of how many of each wire was already seen before.</p>
             <div id="colors">
@@ -87,6 +110,8 @@
                 <p style="color: #0000ff"><i>BLUE</i>: &nbsp &nbsp <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="bluebox"> &nbsp <img src="images/upimg.png" alt="Increment BLUE Counter" class="arrowbuttons" onclick="modifyCounters('BLUE', 1)"> &nbsp <img src="images/downimg.png" alt="Decrement BLUE Counter" class="arrowbuttons" onclick="modifyCounters('BLUE', 0)"></p>
                 <p style="color: #ffffff"><i>BLACK</i>: &nbsp <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="blackbox"> &nbsp <img src="images/upimg.png" alt="Increment BLACK Counter" class="arrowbuttons" onclick="modifyCounters('BLACK', 1)"> &nbsp <img src="images/downimg.png" alt="Decrement BLACK Counter" class="arrowbuttons" onclick="modifyCounters('BLACK', 0)"></p>
             </div>
+			
+			<!--Complicated Wires Helper-->
             <h2>Complicated Wires</h2>
             <p>In the section below, refer to the table to decide what to do with each wire, since the venn-diagram provided in the manual is very hard to understand.</p>
             <div id="tables">
@@ -155,6 +180,8 @@
                     </tr>
                 </table>
             </div>
+			
+			<!--Main Clear Button to clear all text on all JS Generated DIVs and text boxes / areas-->
             <p><button class="BUTTON_CLEAR" onclick="clr_fields()">CLR</button></p>
         </div>
     </body>
