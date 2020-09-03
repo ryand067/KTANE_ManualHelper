@@ -95,6 +95,7 @@ function additionGo() {
     } else {
         output.innerHTML += "AN ERROR OCCURED";
     }
+	document.getElementById("additionTextArea").focus();
 }
 
 function findWord() {
@@ -108,6 +109,7 @@ function findWord() {
     } else {
         output.innerHTML = input + " FOUND!!";
     }
+	document.getElementById('word5').focus();
 }
 
 function binarySearch(arr, word) {
