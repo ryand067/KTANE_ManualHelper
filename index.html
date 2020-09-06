@@ -186,3 +186,13 @@
         </div>
     </body>
 </html>
+
+<script>
+var inputs = document.getElementById("word5");
+inputs.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("wordsgobutton").click();
+    }
+});
+</script>
