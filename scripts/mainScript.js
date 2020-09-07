@@ -1,9 +1,13 @@
+//Variable Array to hold all of the words needed for the 1,000 Words Module Helper
 var wordsFor5Words = [];
 
+//Function to increase and decrease number of each color wires in Sequences
 function modifyCounters(color, direction) {
 	var ele;
 	var newNum = 0;
-	switch (color) {
+	
+    //Get the correct colored wire
+    switch (color) {
 		case "RED":
 			ele = document.getElementById('redbox');
 			break;
@@ -18,6 +22,7 @@ function modifyCounters(color, direction) {
 			alert("An Error Occured with processing the color");
 	}
 	
+    //Get the correct direction (increase or decrease), and complete the task
 	switch (direction) {
 		case 0:
 			newNum = (ele.value - 1);
@@ -35,11 +40,7 @@ function modifyCounters(color, direction) {
 	newNum = 0;
 }
 
-function testFun() {
-	alert("SUCESS!");
-}
-
-function getBinaryVal() {
+/*function getBinaryVal() {
     var input = document.getElementById('binaryText').value.toUpperCase();
     document.getElementById('binaryText').value = "";
     var output = document.getElementById('binaryResponse');
@@ -47,9 +48,9 @@ function getBinaryVal() {
     for (var i = 0; i < input.length; i++) {
       output.innerHTML += input[i].charCodeAt(0).toString(2) + " ";
   }
-}
+}*/
 
-function chickenNuggets() {
+/*function chickenNuggets() {
     var input = document.getElementById('chickNugs').value;
     document.getElementById('chickNugs').value = "";
     var output = document.getElementById('chickNugsRes');   //EXAMPLE: 69
@@ -72,23 +73,86 @@ function chickenNuggets() {
         output.innerHTML += "Nine: " + nine_nuggets + "<br />";
         output.innerHTML += "Six: " + six_nuggets + "<br /";
     }
+}*/
+
+//Function for the Chicken Nuggets Module Helper
+function chickynuggies() {
+    
+    //Get input and output elements
+    var input = document.getElementById('chickNugs').value;
+    document.getElementById('chickNugs').value = "";
+    var output = document.getElementById('chickNugsRes');
+    
+    //Find the solution...
+    output.innerHTML = getSoln(parseInt(input, 10));
+    document.getElementById('chickNugs').focus;
 }
 
+function getSoln(sumTo) {
+    
+    //Declare important needed variables
+    var x, y, z, str;
+    str = "";
+    
+    //Try all values of x, y, and z as long as x, y, and / or z * coefficient <= sumTo
+    for (x = 0; sumTo >= (6 * x); x++) {
+        for (y = 0; sumTo >= (9 * y); y++) {
+            for (z = 0; sumTo >= (20 * z); z++) {
+                if ( (6 * x) + (9 * y) + (20 * z) === sumTo) {
+                    
+                    //Result Found, print and exit unless all is checked
+                    str += printSoln(true, x, y, z);
+                    if (document.getElementById('chickyFirst').checked) {
+                        return str;
+                    }
+                }
+            }
+        }
+    }
+    str += printSoln(false, x, y, z);
+    return str;
+}
+
+//Return the result of the getSoln function for the Chicken Nuggets Module Helper
+function printSoln(found, x, y, z) {
+    var strn = "";
+    
+    //Check if anything was found: If so print success and results, else: print failure
+    if (found) {
+        strn += "Combination Found!<br>&#09;Boxes of 6 Nuggets: " + x + "<br>&#09;Boxes of 9 Nuggets: " + y + "<br>&#09;Boxes of 20 Nuggets: " + z + "<br>----------------------------------------<br><br>";
+    } else {
+        strn += "No Combinations Found!!<br>";
+    }
+    return strn;
+}
+
+//Addition Function
 function additionGo() {
+    
+    //Get input and output elements
     var input = document.getElementById('additionTextArea').value.toUpperCase();
     var lines = input.split('\n');
     document.getElementById('additionTextArea').value = "";
     var output = document.getElementById('additonResponse');
+    
+    //Set sum to 0 and set is so that originally all numbers are valid
     var sum = 0;
     var allNums = true;
+    
+    //Loop through the inputted numbers
     for (var i = 0; i < lines.length; i++) {
+        
+        //If a non-number is detected set allNums to false and exit the loop
         if (isNaN(lines[i])) {
             allNums = false;
             break;
         }
+        
+        //If the number is valid, add it to the current sum
         sum += parseInt(lines[i]);
     }
     
+    //Output the results to the user
     output.innerHTML = "";
     if (allNums) {
         output.innerHTML += "SUM: " + sum.toString(10);
@@ -98,12 +162,18 @@ function additionGo() {
 	document.getElementById("additionTextArea").focus();
 }
 
+//1,000 Words Function
 function findWord() {
+    
+    //Set input and output elements
     var input = document.getElementById('word5').value.toUpperCase();
     document.getElementById('word5').value = "";
     var output = document.getElementById('words5resp');
+    
+    //Sort the array, since binary search requires the array to be sorted: should be already, but doesn't hurt to make sure of it
     wordsFor5Words.sort();
     
+    //If the binarysearch finds it, report to the user that it was found. Otherwise, report that it wasn't
     if (binarySearch(wordsFor5Words, input) === -1) {
         output.innerHTML = input + " NOT FOUND";
     } else {
@@ -112,6 +182,7 @@ function findWord() {
 	document.getElementById('word5').focus();
 }
 
+//Binary Search Function needed for the 1,000 words module helper
 function binarySearch(arr, word) {
     var lower = 0;
     var upper = arr.length - 1;
@@ -134,6 +205,7 @@ function binarySearch(arr, word) {
     return -1;
 }
 
+//Clear Function...Clears all fields and text and resets everything
 function clr_fields() {
 	document.getElementById('redbox').value = "";
 	document.getElementById('redbox').value = 0;
@@ -144,16 +216,19 @@ function clr_fields() {
 	document.getElementById('MemoryTextArea').value = "";
     //document.getElementById('binaryText').value = "";
     //document.getElementById('binaryResponse').innerHTML = "";
-    //document.getElementById('chickNugs').value = "";
-    //document.getElementById('chickNugsRes').innerHTML = "";
+    document.getElementById('chickNugs').value = "";
+    document.getElementById('chickNugsRes').innerHTML = "";
     document.getElementById('additionTextArea').value = "";
     document.getElementById('additonResponse').innerHTML = "";
     document.getElementById('word5').value = "";
     document.getElementById('words5resp').innerHTML = "";
     document.getElementById("showhidetable1").style.display = "none";
     document.getElementById("showhidetable2").style.display = "none";
+    document.getElementById('chickyFirst').checked = true;
+    document.getElementById('chickyAll').checked = false;
 }
 
+//Function to read the textfile of words into a global array needed for the 1,000 words module helper
 function readTextFile(file)
 {
     var rawFile = new XMLHttpRequest();
@@ -172,12 +247,14 @@ function readTextFile(file)
     rawFile.send(null);
 }
 
+//Splits the giant string of words into seperate words needed for the 1,000 words module helper
 function splitLines(text) {
     var splitArray = text.split("\n");
     wordsFor5Words = splitArray;
     printArray(splitArray);
 }
 
+//TEST FUNCTION - Prints an array to see contents to ensure all is working correctly
 function printArray(arrayObj) {
     var i = 0;
     for (i = 0; i < arrayObj.length; i++) {
@@ -185,7 +262,10 @@ function printArray(arrayObj) {
     }
 }
 
+//Show / Hide a table
 function toggleTable(tableNum) {
+    
+    //Get the table ID
     var x;
     if (tableNum === 1) {
         x = document.getElementById("showhidetable1");
@@ -193,13 +273,15 @@ function toggleTable(tableNum) {
         x = document.getElementById("showhidetable2");
     }
     
-  if (x.style.display === "none") {
+    //If the current display is none chane it to block, if block change it to none
+    if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
 }
 
+//Load necessary data like all of the words needed for the 1,000 words module helper at the beginning when the page first loads
 function loadData() {
 	readTextFile('./words.txt');
     document.getElementById("showhidetable1").style.display = "none";
