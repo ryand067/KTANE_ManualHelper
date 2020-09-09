@@ -67,6 +67,20 @@
                 </ol>
                 <p>See <i>Appendix A: Tables</i> to view the CrazyTalk Table.</p>
                 <br>
+                
+                <!--Subject of Modulo-->
+                <h2>Subject of Modulo</h2>
+                <p><i>For those wanting a crash course on modulo operation, fill yer boots!</i></p>
+                <p>The module shows two numbers and a keypad.</p>
+                <p>Take the larger central number (n) modulo the smaller number in the corner (m).</p>
+                <p>To perform the modulo operation, subtract m from n until n &lt; m. Whatever you have left is the correct answer.</p>
+                <p>Alternatively, divide n by m and take the remainder.</p>
+                <p>Whichever method you prefer to use, once you have calculated the correct answer, enter it into the keypad and press the green submit button.</p>
+                <p>To clear your answer, press the red clear button.</p>
+                <p>Entering the correct answer will disarm the module. Entering an incorrect answer will cause a strike and reset both, m and n.</p>
+                <p>n:  &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloN"> &nbsp; m: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloM"> &nbsp; <button class="binaryGo" onclick="modulosGo()" id="chickynuggys">GO</button></p>
+                <p class="resultBox" id="modRes"></p>
+                <br>
             </div>
             <div id="other_right">
                 <h2>Subject of Chicken Nuggets</h2>
@@ -216,6 +230,14 @@
         if (event.keyCode === 13) {
             event.preventDefault();
             document.getElementById("chickynuggys").click();
+        }
+    });
+    
+    var input2 = document.getElementById("moduloM");
+    input2.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("modulosGo").click();
         }
     });
 </script>
