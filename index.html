@@ -31,6 +31,10 @@
             <iframe src="https://ktane.timwi.de/HTML/Crazy%20Talk.html" id="showhidetable1">
                 Sorry your browser does not support inline frames.
             </iframe>
+            <p onclick="toggleTable(2)"><img alt="right arrow" src="images/rightArrow.png" class="clickableArrows">&nbsp; TABLE 2: Divisibility Table</p>
+            <iframe src="https://ktane.timwi.de/HTML/Divisible%20Numbers.html" id="showhidetable2">
+                Sorry your browser does not support inline frames.
+            </iframe>
             <br><br><br>
             
             <!--Modded Modules-->
@@ -78,9 +82,17 @@
                 <p>Whichever method you prefer to use, once you have calculated the correct answer, enter it into the keypad and press the green submit button.</p>
                 <p>To clear your answer, press the red clear button.</p>
                 <p>Entering the correct answer will disarm the module. Entering an incorrect answer will cause a strike and reset both, m and n.</p>
-                <p>n:  &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloN"> &nbsp; m: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloM"> &nbsp; <button class="binaryGo" onclick="modulosGo()" id="chickynuggys">GO</button></p>
+                <p>n:  &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloN"> &nbsp; m: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloM"> &nbsp; <button class="binaryGo" onclick="modulosGo()" id="modgo">GO</button></p>
                 <p class="resultBox" id="modRes"></p>
                 <br>
+                
+                <!--Subject of Complicated Buttons-->
+                <h2>Complicated Buttons</h2>
+                <p><i>These buttons aren't like the others. The good news is that we've found a concise set of instructions on what to do about it! Maybe too concise...</i></p>
+                <p>Each button has one or two colors, and a label.</p>
+                <p>For <b>each</b> button, use the Venn diagram below to decide whether or not to press the button.</p>
+                <p>Press the buttons in the order listed in the table. If no buttons are pressed, press the second button in the list.</p>
+                <p><b>Upon getting a strike, the entire module resets.</b></p>
             </div>
             <div id="other_right">
                 <h2>Subject of Chicken Nuggets</h2>
@@ -113,6 +125,27 @@
                 <p><strong>WARNING: </strong>Strikes will not be recorded until after all five words are answered. Even if the first word is answered incorrectly.</p>
                 <p>Word: &nbsp; <input type="text" maxlength="5" size="5" cols="5" class="NumberBoxes" id="word5"> &nbsp; <button class="binaryGo" onclick="findWord()" id="wordsgobutton" value="submit">GO</button></p>
                 <p class="resultBox" id="words5resp"></p>
+                <br>
+                
+                <!--Subject of Divisible Numbers-->
+                <h2>Subject of Divisible Numbers</h2>
+                <p><i>Who cares about divisibility rules, just use a calculator</i>.</p>
+                <p>This module consists of one screen at the top showing a number, another one at the bottom showing the current stage, a &quot; Yea &quot; button and a &quot; Nay &quot; button.</p>
+                <p>TO solve the module, you have to press the &quot; Yea &quot; or &quot; Nay &quot; button through 3 stages. Go through the rulesand apply the first one that is relevant. Press the &quot; Yea &quot; button if the number is correct according to your answer, and press &quot; Nay &quot; if it's not. Getting a strike will reset the module back to stage 1 and generate new numbers. THe first number means the number generated first regardless of strikes and resets.</p>
+                <p>Please put the main number from the screen in the 1st text box and the number from the rules in the 2nd text box.</p>
+                <p><i>If you do not wish to use the look-up function in this manual helper and want to follow the rules exactly as written on the manual, please see Appendix A: Tables to view the Divisibility Module.</i></p>
+                <p><u>Rules:</u></p>
+                <ul>
+                    <li>If the bomb contains 3 or more batteries, the number must be divisible by 3.</li>
+                    <li>Otherwise, if the bomb contains more lit indicators than unlit ones, the number must be divisible by 9.</li>
+                    <li>Otherwise, if the first displayed number was less than 1,000, the number must be divisible by 6.</li>
+                    <li>Otherwise, if the starting time on the bomb was less thatn 10 minutes, the number must be divisible by 4.</li>
+                    <li>Otherwise, if the last digit of the serial number is even, the nuber must be divisible by 2.</li>
+                    <li>Otherwise, if there is more thant 10 modules on the bomb, the number must be divisible by 5.</li>
+                    <li>Otherwise, the number must be divisibile by 10.</li>
+                </ul>
+                <p>Num 1: &nbsp; <input type="number" maxlength="5" size="5" cols="5" class="NumberBoxes" id="divisibleNum"> &nbsp; Num 2: &nbsp; <input type="number" maxlength="2" size="2" cols="2" class="NumberBoxes" id="divisibleNum2"> &nbsp; <button class="binaryGo" onclick="divisibleNumGo()" id="divisibleNumBut">GO</button></p>
+                <p class="resultBox" id="divisibleRes"></p>
                 <br>
             </div>
             <br>
@@ -237,7 +270,15 @@
     input2.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             event.preventDefault();
-            document.getElementById("modulosGo").click();
+            document.getElementById("modgo").click();
+        }
+    });
+    
+    var input3 = document.getElementById("divisibleNum2");
+    input3.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("divisibleNumBut").click();
         }
     });
 </script>

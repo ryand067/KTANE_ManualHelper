@@ -205,6 +205,48 @@ function binarySearch(arr, word) {
     return -1;
 }
 
+//Modulos Function
+function modulosGo() {
+    
+    //Get input and output from the HTML File
+    var n = parseInt(document.getElementById('moduloN').value, 10);
+    var m = parseInt(document.getElementById('moduloM').value, 10);
+    var output = document.getElementById('modRes');
+    
+    //Clear the textboxes for next input
+    document.getElementById('moduloN').value = "";
+    document.getElementById('moduloM').value = "";
+    
+    //Display results
+    output.innerHTML = n + " mod " + m + " = " + n % m;
+    
+    //Refocus the n text box
+    document.getElementById('moduloN').focus();
+}
+
+//Divisibility Numbers Function
+function divisibleNumGo() {
+    
+    //Get inputs and outputs
+    var a = parseInt(document.getElementById('divisibleNum').value, 10);
+    var b = parseInt(document.getElementById('divisibleNum2').value, 10);
+    var output = document.getElementById('divisibleRes');
+    
+    //Clear the textboxes for next input
+    document.getElementById('divisibleNum').value = "";
+    document.getElementById('divisibleNum2').value = "";
+    
+    //Display the results
+    if (a % b === 0) {
+        output.innerHTML = "YEA";
+    } else {
+        output.innerHTML = "NAY";
+    }
+    
+    //Return focus to the first textbox
+    document.getElementById('divisibleNum').focus();
+}
+
 //Clear Function...Clears all fields and text and resets everything
 function clr_fields() {
 	document.getElementById('redbox').value = "";
@@ -214,8 +256,6 @@ function clr_fields() {
 	document.getElementById('blackbox').value = "";
 	document.getElementById('blackbox').value = 0;
 	document.getElementById('MemoryTextArea').value = "";
-    //document.getElementById('binaryText').value = "";
-    //document.getElementById('binaryResponse').innerHTML = "";
     document.getElementById('chickNugs').value = "";
     document.getElementById('chickNugsRes').innerHTML = "";
     document.getElementById('additionTextArea').value = "";
@@ -226,6 +266,12 @@ function clr_fields() {
     document.getElementById("showhidetable2").style.display = "none";
     document.getElementById('chickyFirst').checked = true;
     document.getElementById('chickyAll').checked = false;
+    document.getElementById('moduloN').value = "";
+    document.getElementById('moduloM').value = "";
+    document.getElementById('modRes').innerHTML = "";
+    document.getElementById('divisibleNum').value = "";
+    document.getElementById('divisibleNum2').value = "";
+    document.getElementById('divisibleRes').innerHTML = "";
 }
 
 //Function to read the textfile of words into a global array needed for the 1,000 words module helper
