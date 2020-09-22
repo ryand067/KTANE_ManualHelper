@@ -60,6 +60,13 @@ ol, ul {
     overflow: auto;
 }
 
+.clickableArrows2 {
+    max-width: 5%;
+    height: auto;
+    display: inline-block;
+    overflow: auto;
+}
+
 /*Table Styles: Particularly for the 'Complicated Wires' Helper*/
 table,
 th,

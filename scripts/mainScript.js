@@ -1,5 +1,6 @@
 //Variable Array to hold all of the words needed for the 1,000 Words Module Helper
 var wordsFor5Words = [];
+var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "complicatedButtons", "tableA", "tableB"];
 
 //Function to increase and decrease number of each color wires in Sequences
 function modifyCounters(color, direction) {
@@ -39,41 +40,6 @@ function modifyCounters(color, direction) {
 	}
 	newNum = 0;
 }
-
-/*function getBinaryVal() {
-    var input = document.getElementById('binaryText').value.toUpperCase();
-    document.getElementById('binaryText').value = "";
-    var output = document.getElementById('binaryResponse');
-    output.innerHTML = "0";
-    for (var i = 0; i < input.length; i++) {
-      output.innerHTML += input[i].charCodeAt(0).toString(2) + " ";
-  }
-}*/
-
-/*function chickenNuggets() {
-    var input = document.getElementById('chickNugs').value;
-    document.getElementById('chickNugs').value = "";
-    var output = document.getElementById('chickNugsRes');   //EXAMPLE: 69
-    var ChickenNuggets = parseInt(input, 10);
-    var twenty_nuggets = 0;
-    var nine_nuggets = 0;
-    var six_nuggets = 0;
-    
-    twenty_nuggets = Math.floor(ChickenNuggets / 20);   //3
-    ChickenNuggets = Math.floor(ChickenNuggets % 20);   //9
-    nine_nuggets = Math.floor(ChickenNuggets / 9);      //1
-    ChickenNuggets = Math.floor(ChickenNuggets % 9);    //0
-    six_nuggets = Math.floor(ChickenNuggets / 6);       //0
-    ChickenNuggets = Math.floor(ChickenNuggets % 6);    //0
-    
-    if (ChickenNuggets != 0) {
-        output.innerHTML = "IMPOSSIBLE REQUEST!";
-    } else {
-        output.innerHTML = "Twenty: " + twenty_nuggets + "<br />";
-        output.innerHTML += "Nine: " + nine_nuggets + "<br />";
-        output.innerHTML += "Six: " + six_nuggets + "<br /";
-    }
-}*/
 
 //Function for the Chicken Nuggets Module Helper
 function chickynuggies() {
@@ -262,8 +228,6 @@ function clr_fields() {
     document.getElementById('additonResponse').innerHTML = "";
     document.getElementById('word5').value = "";
     document.getElementById('words5resp').innerHTML = "";
-    document.getElementById("showhidetable1").style.display = "none";
-    document.getElementById("showhidetable2").style.display = "none";
     document.getElementById('chickyFirst').checked = true;
     document.getElementById('chickyAll').checked = false;
     document.getElementById('moduloN').value = "";
@@ -272,6 +236,11 @@ function clr_fields() {
     document.getElementById('divisibleNum').value = "";
     document.getElementById('divisibleNum2').value = "";
     document.getElementById('divisibleRes').innerHTML = "";
+    
+    //Hide All Other Mods
+    for (var a = 0; a < divs.length; a++) {
+        hideDiv(divs[a]);
+    }
 }
 
 //Function to read the textfile of words into a global array needed for the 1,000 words module helper
@@ -327,9 +296,36 @@ function toggleTable(tableNum) {
   }
 }
 
+//Function to show/hide an HTML element
+function showHide(divId) {
+    var x = document.getElementById(divId);
+    var arrow = document.getElementById(divId.concat('Arrow'));
+    
+    //If hidden, set to visible; if visible, set to hidden
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        arrow.src = '../images/closeArrow.png';
+    } else {
+        x.style.display = "none";
+        arrow.src = '../images/rightArrow.png';
+    }
+}
+
+//Function to hide a div
+function hideDiv(divId) {
+    var x = document.getElementById(divId);
+    var arrow = document.getElementById(divId.concat('Arrow'));
+    
+    x.style.display = "none";
+    arrow.src = '../images/rightArrow.png';
+}
+
 //Load necessary data like all of the words needed for the 1,000 words module helper at the beginning when the page first loads
 function loadData() {
 	readTextFile('./words.txt');
-    document.getElementById("showhidetable1").style.display = "none";
-    document.getElementById("showhidetable2").style.display = "none";
+    
+    //Hide All Other Mods
+    for (var a = 0; a < divs.length; a++) {
+        hideDiv(divs[a]);
+    }
 }

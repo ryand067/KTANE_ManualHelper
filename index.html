@@ -27,12 +27,12 @@
             
             <!--Appendix A: Tables:: Holds the different tables needed for the different modded modules, like CrazyTalk-->
             <h1>Appendix A: Tables</h1>
-            <p onclick="toggleTable(1)"><img alt="right arrow" src="images/rightArrow.png" class="clickableArrows">&nbsp; TABLE 1: CrazyTalk Table</p>
-            <iframe src="https://ktane.timwi.de/HTML/Crazy%20Talk.html" id="showhidetable1">
+            <p onclick="showHide('tableA')"><img alt="Click to Show / Hide" src="images/closeArrow.png" class="clickableArrows" id="tableAArrow">&nbsp; TABLE 1: CrazyTalk Table</p>
+            <iframe src="https://ktane.timwi.de/HTML/Crazy%20Talk.html" id="tableA">
                 Sorry your browser does not support inline frames.
             </iframe>
-            <p onclick="toggleTable(2)"><img alt="right arrow" src="images/rightArrow.png" class="clickableArrows">&nbsp; TABLE 2: Divisibility Table</p>
-            <iframe src="https://ktane.timwi.de/HTML/Divisible%20Numbers.html" id="showhidetable2">
+            <p onclick="showHide('tableB')"><img alt="Click to Show / Hide" src="images/closeArrow.png" class="clickableArrows" id="tableBArrow">&nbsp; TABLE 2: Divisibility Table</p>
+            <iframe src="https://ktane.timwi.de/HTML/Divisible%20Numbers.html" id="tableB">
                 Sorry your browser does not support inline frames.
             </iframe>
             <br><br><br>
@@ -41,209 +41,217 @@
             <h1>Other Modules</h1>
             <br>
             <div id="other_left">
-                <!--<h2>Subject of Binary</h2>
-                    <p>This module consists of a screen and 5 buttons: &quot;0&quot;, &quot;1&quot;, &quot;R&quot;, &quot;Send&quot;, and &quot;Useless button&quot;.</p>
-                    <p>On the screen you will see a word. Translate each letter of the word into binary with the table below and input it into the module with the &quot;0&quot; and &quot;1&quot; buttons. To submit your input, press the &quot;Send&quot; button. You can also press the &quot;R&quot; button to reset your input.</p>
-                    <p>In this manual, the table have been replaced by a simple function that looks up the codes for you.</p>
-                    <p>If the submitted input is correct, the module will be disarmed. If it is incorrect, a strike will be recorded, your input will be reset, and a new word will be shown.</p>
-                    <p>Letter / Word: &nbsp <input type="text" maxlength="5" size="5" cols="5" class="NumberBoxes" id="binaryText"> &nbsp <button class="binaryGo" onclick="getBinaryVal()">GO</button></p>
-                    <p class="resultBox" id="binaryResponse"></p>
-                    <br>-->
                 
                 <!--Subject of Addition-->
-                <h2>Subject of Addition</h2>
-                <p>Compute the sum on the display and enter it using the numbered buttons to solve the module. Use the grey &quot;A&quot; button to cycle through 10 numbers which will need added together. Use the red &quot;C&quot; button to clear your input, and the &quot;+&quot; button to submit it.</p>
-                <p><strong>NOTE: Do NOT prepend &quot;0&quot;s to your number. There will ALWAYS be 10 numbers to add together.</strong></p>
-                <textarea id="additionTextArea" rows="10" cols="5" class="textareaClass"></textarea>
-                <br><br>
-                <button class="binaryGo" onclick="additionGo()">GO</button>
-                <p class="resultBox" id="additonResponse"></p>
-                <br>
+                <h2 onclick="showHide('addition')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="additionArrow"> &nbsp; Subject of Addition</h2>
+                <div id="addition">
+                    <p>Compute the sum on the display and enter it using the numbered buttons to solve the module. Use the grey &quot;A&quot; button to cycle through 10 numbers which will need added together. Use the red &quot;C&quot; button to clear your input, and the &quot;+&quot; button to submit it.</p>
+                    <p><strong>NOTE: Do NOT prepend &quot;0&quot;s to your number. There will ALWAYS be 10 numbers to add together.</strong></p>
+                    <textarea id="additionTextArea" rows="10" cols="5" class="textareaClass"></textarea>
+                    <br><br>
+                    <button class="binaryGo" onclick="additionGo()">GO</button>
+                    <p class="resultBox" id="additonResponse"></p>
+                    <br>
+                </div>
                 
                 <!--Subject of CrazyTalk-->
-                <h2>Subject of Crazy Talk</h2>
-                <p><i>Nothing. Literally nothing. Blank. Nada.</i></p>
-                <ol>
-                    <li>Text will appear on a display.</li>
-                    <li>Find the exact match and the action in the table below.</li>
-                    <li>Flip the switch <u>down</u> when the bomb timer has the number before the forward slash in the seconds column.</li>
-                    <li>Flip the switch back <u>up</u> when the bomb timer has the number after the forward slash in the seconds column.</li>
-                </ol>
-                <p>See <i>Appendix A: Tables</i> to view the CrazyTalk Table.</p>
-                <br>
+                <h2 onclick="showHide('crazyTalk')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="crazyTalkArrow"> &nbsp; Subject of Crazy Talk</h2>
+                <div id="crazyTalk">
+                    <p><i>Nothing. Literally nothing. Blank. Nada.</i></p>
+                    <ol>
+                        <li>Text will appear on a display.</li>
+                        <li>Find the exact match and the action in the table below.</li>
+                        <li>Flip the switch <u>down</u> when the bomb timer has the number before the forward slash in the seconds column.</li>
+                        <li>Flip the switch back <u>up</u> when the bomb timer has the number after the forward slash in the seconds column.</li>
+                    </ol>
+                    <p>See <i>Appendix A: Tables</i> to view the CrazyTalk Table.</p>
+                    <br>
+                </div>
                 
                 <!--Subject of Modulo-->
-                <h2>Subject of Modulo</h2>
-                <p><i>For those wanting a crash course on modulo operation, fill yer boots!</i></p>
-                <p>The module shows two numbers and a keypad.</p>
-                <p>Take the larger central number (n) modulo the smaller number in the corner (m).</p>
-                <p>To perform the modulo operation, subtract m from n until n &lt; m. Whatever you have left is the correct answer.</p>
-                <p>Alternatively, divide n by m and take the remainder.</p>
-                <p>Whichever method you prefer to use, once you have calculated the correct answer, enter it into the keypad and press the green submit button.</p>
-                <p>To clear your answer, press the red clear button.</p>
-                <p>Entering the correct answer will disarm the module. Entering an incorrect answer will cause a strike and reset both, m and n.</p>
-                <p>n:  &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloN"> &nbsp; m: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloM"> &nbsp; <button class="binaryGo" onclick="modulosGo()" id="modgo">GO</button></p>
-                <p class="resultBox" id="modRes"></p>
-                <br>
+                <h2 onclick="showHide('modulo')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="moduloArrow"> &nbsp; Subject of Modulo</h2>
+                <div id="modulo">
+                    <p><i>For those wanting a crash course on modulo operation, fill yer boots!</i></p>
+                    <p>The module shows two numbers and a keypad.</p>
+                    <p>Take the larger central number (n) modulo the smaller number in the corner (m).</p>
+                    <p>To perform the modulo operation, subtract m from n until n &lt; m. Whatever you have left is the correct answer.</p>
+                    <p>Alternatively, divide n by m and take the remainder.</p>
+                    <p>Whichever method you prefer to use, once you have calculated the correct answer, enter it into the keypad and press the green submit button.</p>
+                    <p>To clear your answer, press the red clear button.</p>
+                    <p>Entering the correct answer will disarm the module. Entering an incorrect answer will cause a strike and reset both, m and n.</p>
+                    <p>n: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloN"> &nbsp; m: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloM"> &nbsp; <button class="binaryGo" onclick="modulosGo()" id="modgo">GO</button></p>
+                    <p class="resultBox" id="modRes"></p>
+                    <br>
+                </div>
                 
                 <!--Subject of Complicated Buttons-->
-                <h2>Complicated Buttons</h2>
-                <p><i>These buttons aren't like the others. The good news is that we've found a concise set of instructions on what to do about it! Maybe too concise...</i></p>
-                <p>Each button has one or two colors, and a label.</p>
-                <p>For <b>each</b> button, use the Venn diagram below to decide whether or not to press the button.</p>
-                <p>Press the buttons in the order listed in the table. If no buttons are pressed, press the second button in the list.</p>
-                <p><b>Upon getting a strike, the entire module resets.</b></p>
-                <table>
-                    <tr>
-                        <th> </th>
-                        <th>None</th>
-                        <th>&quot;Press&quot;</th>
-                        <th>Middle Pos.</th>
-                        <th>&quot;Press&quot; &amp; Middle Pos.</th>
-                    </tr>
-                    <tr>
-                        <th>None</th>
-                        <td>R</td>
-                        <td>P</td>
-                        <td>B</td>
-                        <td>B</td>
-                    </tr>
-                    <tr>
-                        <th><span style="color: #ff0000;">Red</span></th>
-                        <td>P</td>
-                        <td>P</td>
-                        <td>D</td>
-                        <td>B</td>
-                    </tr>
-                    <tr>
-                        <th><span style="color: #0000ff;">Blue</span></th>
-                        <td>R</td>
-                        <td>D</td>
-                        <td>S</td>
-                        <td>S</td>
-                    </tr>
-                    <tr>
-                        <th><span style="color: #ff0000;">Red</span><span style="color: #ffffff;"> &amp; </span><span style="color: #0000ff;"> Blue</span></th>
-                        <td>R</td>
-                        <td>S</td>
-                        <td>R</td>
-                        <td>D</td>
-                    </tr>
-                </table>
-                <br>
-                <table>
-                    <tr>
-                        <th>Letter</th>
-                        <th>Meaning</th>
-                    </tr>
-                    <tr>
-                        <td>P</td>
-                        <td>Press the Button</td>
-                    </tr>
-                    <tr>
-                        <td>D</td>
-                        <td>Don't press the button</td>
-                    </tr>
-                    <tr>
-                        <td>R</td>
-                        <td>Press the button if the serial number contains 2 or more repeated characters</td>
-                    </tr>
-                    <tr>
-                        <td>S</td>
-                        <td>Press the button if the bomb has a serial port</td>
-                    </tr>
-                    <tr>
-                        <td>B</td>
-                        <td>Press the button if the bomb has 2 or more battery holders <br> <strong>NOTE: This is different than batteries</strong></td>
-                    </tr>
-                </table>
-                <br>
-                <p>Order to press the buttons</p>
-                <table>
-                    <tr>
-                        <th>Label of 1st button</th>
-                        <th>0-1 Batteries</th>
-                        <th>2-3 Batteries</th>
-                        <th>4-5 Batteries</th>
-                        <th>6+ Batteries</th>
-                    </tr>
-                    <tr>
-                        <td>Press</td>
-                        <td>1, 2, 3</td>
-                        <td>2, 3, 1</td>
-                        <td>3, 1, 2</td>
-                        <td>1, 2, 3</td>
-                    </tr>
-                    <tr>
-                        <td>Hold</td>
-                        <td>2, 1, 3</td>
-                        <td>3, 2, 1</td>
-                        <td>1, 3, 2</td>
-                        <td>2, 3, 1</td>
-                    </tr>
-                    <tr>
-                        <td>Detonate</td>
-                        <td>3, 1, 2</td>
-                        <td>1, 2, 3</td>
-                        <td>2, 1, 3</td>
-                        <td>3, 1, 2</td>
-                    </tr>
-                </table>
-                <br>
+                <h2 onclick="showHide('complicatedButtons')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="complicatedButtonsArrow"> &nbsp; Complicated Buttons</h2>
+                <div id="complicatedButtons">
+                    <p><i>These buttons aren't like the others. The good news is that we've found a concise set of instructions on what to do about it! Maybe too concise...</i></p>
+                    <p>Each button has one or two colors, and a label.</p>
+                    <p>For <b>each</b> button, use the Venn diagram below to decide whether or not to press the button.</p>
+                    <p>Press the buttons in the order listed in the table. If no buttons are pressed, press the second button in the list.</p>
+                    <p><b>Upon getting a strike, the entire module resets.</b></p>
+                    <table>
+                        <tr>
+                            <th> </th>
+                            <th>None</th>
+                            <th>&quot;Press&quot;</th>
+                            <th>Middle Pos.</th>
+                            <th>&quot;Press&quot; &amp; Middle Pos.</th>
+                        </tr>
+                        <tr>
+                            <th>None</th>
+                            <td>R</td>
+                            <td>P</td>
+                            <td>B</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <th><span style="color: #ff0000;">Red</span></th>
+                            <td>P</td>
+                            <td>P</td>
+                            <td>D</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <th><span style="color: #0000ff;">Blue</span></th>
+                            <td>R</td>
+                            <td>D</td>
+                            <td>S</td>
+                            <td>S</td>
+                        </tr>
+                        <tr>
+                            <th><span style="color: #ff0000;">Red</span><span style="color: #ffffff;"> &amp; </span><span style="color: #0000ff;"> Blue</span></th>
+                            <td>R</td>
+                            <td>S</td>
+                            <td>R</td>
+                            <td>D</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Letter</th>
+                            <th>Meaning</th>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>Press the Button</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>Don't press the button</td>
+                        </tr>
+                        <tr>
+                            <td>R</td>
+                            <td>Press the button if the serial number contains 2 or more repeated characters</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>Press the button if the bomb has a serial port</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>Press the button if the bomb has 2 or more battery holders <br> <strong>NOTE: This is different than batteries</strong></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p>Order to press the buttons</p>
+                    <table>
+                        <tr>
+                            <th>Label of 1st button</th>
+                            <th>0-1 Batteries</th>
+                            <th>2-3 Batteries</th>
+                            <th>4-5 Batteries</th>
+                            <th>6+ Batteries</th>
+                        </tr>
+                        <tr>
+                            <td>Press</td>
+                            <td>1, 2, 3</td>
+                            <td>2, 3, 1</td>
+                            <td>3, 1, 2</td>
+                            <td>1, 2, 3</td>
+                        </tr>
+                        <tr>
+                            <td>Hold</td>
+                            <td>2, 1, 3</td>
+                            <td>3, 2, 1</td>
+                            <td>1, 3, 2</td>
+                            <td>2, 3, 1</td>
+                        </tr>
+                        <tr>
+                            <td>Detonate</td>
+                            <td>3, 1, 2</td>
+                            <td>1, 2, 3</td>
+                            <td>2, 1, 3</td>
+                            <td>3, 1, 2</td>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
             </div>
             <div id="other_right">
-                <h2>Subject of Chicken Nuggets</h2>
-                <p>You are a homeless man who recently got hired at the small restaurant down the street called McDonald's&reg;.</p>
-                <p>The McDonald's&reg; corporation sells Chicken Nuggets in packs of six, nine, and twenty; all of which relate to the corresponding buttons in the bottom row in the previously mentioned order.</p>
-                <p>A customer will order a certain amount of Chicken Nuggets as shown in black text, and you must give him his exact order.</p>
-                <p>To add to your current nugget amount, press their corresponding buttons. Press the button on the top to give your current nugget amount to the customer.</p>
-                <p>If the customer wants an amount of chicken nuggets that is simply impossible to make, then hold the button to drown the customer and get a bonus check by your boss.</p>
-                <p>If the customer receives too many chicken nuggets, he dies of obesity. If he receives too little, he will starve to death. Both scenarios will result in your termination.</p>
-                <p># of Chicken Nuggets Requested: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="chickNugs"> &nbsp; <button class="binaryGo" onclick="chickynuggies()" id="chickynuggys">GO</button></p>
-                <p>
-                    <label class="container" class="radio-inline">
-                        Show First
-                        <input type="radio" name="allOr1" value="first" id="chickyFirst" checked="true">
-                        <span class="checkmark"></span>
-                    </label> &nbsp; | &nbsp;
-                    <label class="container">
-                        Show All
-                        <input type="radio" name="allOr1" value="all" id="chickyAll">
-                        <span class="checkmark"></span>
-                    </label>
-                </p>
-                <p class="resultBox" id="chickNugsRes"></p>
-                <br>
+                
+                <!--Chicken Nuggets Modded Module-->
+                <h2 onclick="showHide('chickenNuggets')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="chickenNuggetsArrow"> &nbsp; Subject of Chicken Nuggets</h2>
+                <div id="chickenNuggets">
+                    <p>You are a homeless man who recently got hired at the small restaurant down the street called McDonald's&reg;.</p>
+                    <p>The McDonald's&reg; corporation sells Chicken Nuggets in packs of six, nine, and twenty; all of which relate to the corresponding buttons in the bottom row in the previously mentioned order.</p>
+                    <p>A customer will order a certain amount of Chicken Nuggets as shown in black text, and you must give him his exact order.</p>
+                    <p>To add to your current nugget amount, press their corresponding buttons. Press the button on the top to give your current nugget amount to the customer.</p>
+                    <p>If the customer wants an amount of chicken nuggets that is simply impossible to make, then hold the button to drown the customer and get a bonus check by your boss.</p>
+                    <p>If the customer receives too many chicken nuggets, he dies of obesity. If he receives too little, he will starve to death. Both scenarios will result in your termination.</p>
+                    <p># of Chicken Nuggets Requested: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="chickNugs"> &nbsp; <button class="binaryGo" onclick="chickynuggies()" id="chickynuggys">GO</button></p>
+                    <p>
+                        <label class="container" class="radio-inline">
+                            Show First
+                            <input type="radio" name="allOr1" value="first" id="chickyFirst" checked="true">
+                            <span class="checkmark"></span>
+                        </label> &nbsp; | &nbsp;
+                        <label class="container">
+                            Show All
+                            <input type="radio" name="allOr1" value="all" id="chickyAll">
+                            <span class="checkmark"></span>
+                        </label>
+                    </p>
+                    <p class="resultBox" id="chickNugsRes"></p>
+                    <br>
+                </div>
                 
                 <!--Subject of 1,000 Words-->
-                <h2>Subject of 1,000 Words</h2>
-                <p>The module contains 5 displays that spell out 5 letter words. Determine if the word shown is in the manual table. Press <strong>YES</strong> if the word is in the munual table. If not press <strong>NO</strong>. Answer five times in a row correctly to solve the module. You will get a strike if one or more of the answers you sent are incorrect.</p>
-                <p>For this manual helper, since the list is so long, the giant table have been replaced with a look-up function. Simply type the word in and recieve a &quot;YES&quot; or &quot;NO&quot; answer to relay to the diffuser.</p>
-                <p><strong>WARNING: </strong>Strikes will not be recorded until after all five words are answered. Even if the first word is answered incorrectly.</p>
-                <p>Word: &nbsp; <input type="text" maxlength="5" size="5" cols="5" class="NumberBoxes" id="word5"> &nbsp; <button class="binaryGo" onclick="findWord()" id="wordsgobutton" value="submit">GO</button></p>
-                <p class="resultBox" id="words5resp"></p>
-                <br>
+                <h2 onclick="showHide('thousandWords')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="thousandWordsArrow"> &nbsp; Subject of 1,000 Words</h2>
+                <div id="thousandWords">
+                    <p>The module contains 5 displays that spell out 5 letter words. Determine if the word shown is in the manual table. Press <strong>YES</strong> if the word is in the munual table. If not press <strong>NO</strong>. Answer five times in a row correctly to solve the module. You will get a strike if one or more of the answers you sent are incorrect.</p>
+                    <p>For this manual helper, since the list is so long, the giant table have been replaced with a look-up function. Simply type the word in and recieve a &quot;YES&quot; or &quot;NO&quot; answer to relay to the diffuser.</p>
+                    <p><strong>WARNING: </strong>Strikes will not be recorded until after all five words are answered. Even if the first word is answered incorrectly.</p>
+                    <p>Word: &nbsp; <input type="text" maxlength="5" size="5" cols="5" class="NumberBoxes" id="word5"> &nbsp; <button class="binaryGo" onclick="findWord()" id="wordsgobutton" value="submit">GO</button></p>
+                    <p class="resultBox" id="words5resp"></p>
+                    <br>
+                </div>
                 
                 <!--Subject of Divisible Numbers-->
-                <h2>Subject of Divisible Numbers</h2>
-                <p><i>Who cares about divisibility rules, just use a calculator</i>.</p>
-                <p>This module consists of one screen at the top showing a number, another one at the bottom showing the current stage, a &quot; Yea &quot; button and a &quot; Nay &quot; button.</p>
-                <p>TO solve the module, you have to press the &quot; Yea &quot; or &quot; Nay &quot; button through 3 stages. Go through the rulesand apply the first one that is relevant. Press the &quot; Yea &quot; button if the number is correct according to your answer, and press &quot; Nay &quot; if it's not. Getting a strike will reset the module back to stage 1 and generate new numbers. THe first number means the number generated first regardless of strikes and resets.</p>
-                <p>Please put the main number from the screen in the 1st text box and the number from the rules in the 2nd text box.</p>
-                <p><i>If you do not wish to use the look-up function in this manual helper and want to follow the rules exactly as written on the manual, please see Appendix A: Tables to view the Divisibility Module.</i></p>
-                <p><u>Rules:</u></p>
-                <ul>
-                    <li>If the bomb contains 3 or more batteries, the number must be divisible by 3.</li>
-                    <li>Otherwise, if the bomb contains more lit indicators than unlit ones, the number must be divisible by 9.</li>
-                    <li>Otherwise, if the first displayed number was less than 1,000, the number must be divisible by 6.</li>
-                    <li>Otherwise, if the starting time on the bomb was less thatn 10 minutes, the number must be divisible by 4.</li>
-                    <li>Otherwise, if the last digit of the serial number is even, the nuber must be divisible by 2.</li>
-                    <li>Otherwise, if there is more thant 10 modules on the bomb, the number must be divisible by 5.</li>
-                    <li>Otherwise, the number must be divisibile by 10.</li>
-                </ul>
-                <p>Num 1: &nbsp; <input type="number" maxlength="5" size="5" cols="5" class="NumberBoxes" id="divisibleNum"> &nbsp; Num 2: &nbsp; <input type="number" maxlength="2" size="2" cols="2" class="NumberBoxes" id="divisibleNum2"> &nbsp; <button class="binaryGo" onclick="divisibleNumGo()" id="divisibleNumBut">GO</button></p>
-                <p class="resultBox" id="divisibleRes"></p>
-                <br>
+                <h2 onclick="showHide('divisibleNumbers')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="divisibleNumbersArrow"> &nbsp; Subject of Divisible Numbers</h2>
+                <div id="divisibleNumbers">
+                    <p><i>Who cares about divisibility rules, just use a calculator</i>.</p>
+                    <p>This module consists of one screen at the top showing a number, another one at the bottom showing the current stage, a &quot; Yea &quot; button and a &quot; Nay &quot; button.</p>
+                    <p>TO solve the module, you have to press the &quot; Yea &quot; or &quot; Nay &quot; button through 3 stages. Go through the rulesand apply the first one that is relevant. Press the &quot; Yea &quot; button if the number is correct according to your answer, and press &quot; Nay &quot; if it's not. Getting a strike will reset the module back to stage 1 and generate new numbers. THe first number means the number generated first regardless of strikes and resets.</p>
+                    <p>Please put the main number from the screen in the 1st text box and the number from the rules in the 2nd text box.</p>
+                    <p><i>If you do not wish to use the look-up function in this manual helper and want to follow the rules exactly as written on the manual, please see Appendix A: Tables to view the Divisibility Module.</i></p>
+                    <p><u>Rules:</u></p>
+                    <ul>
+                        <li>If the bomb contains 3 or more batteries, the number must be divisible by 3.</li>
+                        <li>Otherwise, if the bomb contains more lit indicators than unlit ones, the number must be divisible by 9.</li>
+                        <li>Otherwise, if the first displayed number was less than 1,000, the number must be divisible by 6.</li>
+                        <li>Otherwise, if the starting time on the bomb was less thatn 10 minutes, the number must be divisible by 4.</li>
+                        <li>Otherwise, if the last digit of the serial number is even, the nuber must be divisible by 2.</li>
+                        <li>Otherwise, if there is more thant 10 modules on the bomb, the number must be divisible by 5.</li>
+                        <li>Otherwise, the number must be divisibile by 10.</li>
+                    </ul>
+                    <p>Num 1: &nbsp; <input type="number" maxlength="5" size="5" cols="5" class="NumberBoxes" id="divisibleNum"> &nbsp; Num 2: &nbsp; <input type="number" maxlength="2" size="2" cols="2" class="NumberBoxes" id="divisibleNum2"> &nbsp; <button class="binaryGo" onclick="divisibleNumGo()" id="divisibleNumBut">GO</button></p>
+                    <p class="resultBox" id="divisibleRes"></p>
+                    <br>
+                </div>
             </div>
             <br>
             <br>
