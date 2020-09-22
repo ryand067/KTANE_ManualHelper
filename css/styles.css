@@ -91,7 +91,7 @@ td {
 }
 
 /*CrazyTalk Sub-Manual*/
-#tableA, tableB {
+#tableA, #tableB {
     text-align: center;
     display: block;
     width: 100%;
