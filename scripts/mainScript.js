@@ -322,10 +322,12 @@ function hideDiv(divId) {
 
 //Load necessary data like all of the words needed for the 1,000 words module helper at the beginning when the page first loads
 function loadData() {
-	readTextFile('./words.txt');
     
     //Hide All Other Mods
     for (var a = 0; a < divs.length; a++) {
         hideDiv(divs[a]);
     }
+	
+	//Load in data from the words array file for 1,000 Words
+	readTextFile('./words.txt');
 }
