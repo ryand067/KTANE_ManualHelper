@@ -91,7 +91,7 @@ td {
 }
 
 /*CrazyTalk Sub-Manual*/
-#showhidetable1 {
+#tableA, tableB {
     text-align: center;
     display: block;
     width: 100%;
