@@ -1,6 +1,6 @@
 //Variable Array to hold all of the words needed for the 1,000 Words Module Helper
 var wordsFor5Words = [];
-var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "complicatedButtons", "tableA", "tableB"];
+var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC"];
 
 //Function to increase and decrease number of each color wires in Sequences
 function modifyCounters(color, direction) {
