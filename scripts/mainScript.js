@@ -304,10 +304,10 @@ function showHide(divId) {
     //If hidden, set to visible; if visible, set to hidden
     if (x.style.display === "none") {
         x.style.display = "block";
-        arrow.src = '../images/closeArrow.png';
+        arrow.src = './images/closeArrow.png';
     } else {
         x.style.display = "none";
-        arrow.src = '../images/rightArrow.png';
+        arrow.src = './images/rightArrow.png';
     }
 }
 
@@ -317,7 +317,7 @@ function hideDiv(divId) {
     var arrow = document.getElementById(divId.concat('Arrow'));
     
     x.style.display = "none";
-    arrow.src = '../images/rightArrow.png';
+    arrow.src = './images/rightArrow.png';
 }
 
 //Load necessary data like all of the words needed for the 1,000 words module helper at the beginning when the page first loads
