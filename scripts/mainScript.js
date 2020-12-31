@@ -195,12 +195,11 @@ function divisibleNumGo() {
     
     //Get inputs and outputs
     var a = parseInt(document.getElementById('divisibleNum').value, 10);
-    var b = parseInt(document.getElementById('divisibleNum2').value, 10);
+    var b = parseInt(getSelected("divNumRad"), 10);
     var output = document.getElementById('divisibleRes');
     
     //Clear the textboxes for next input
     document.getElementById('divisibleNum').value = "";
-    document.getElementById('divisibleNum2').value = "";
     
     //Display the results
     if (a % b === 0) {
@@ -211,6 +210,17 @@ function divisibleNumGo() {
     
     //Return focus to the first textbox
     document.getElementById('divisibleNum').focus();
+}
+
+//Function to get value of selected Radio Button
+function getSelected(radioName) {
+    var radios = document.getElementsByName(radioName);
+    
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            return radios[i].value
+        }
+    }
 }
 
 //Clear Function...Clears all fields and text and resets everything
@@ -229,12 +239,12 @@ function clr_fields() {
     document.getElementById('word5').value = "";
     document.getElementById('words5resp').innerHTML = "";
     document.getElementById('chickyFirst').checked = true;
+    document.getElementById('divNumRad3').checked = true;
     document.getElementById('chickyAll').checked = false;
     document.getElementById('moduloN').value = "";
     document.getElementById('moduloM').value = "";
     document.getElementById('modRes').innerHTML = "";
     document.getElementById('divisibleNum').value = "";
-    document.getElementById('divisibleNum2').value = "";
     document.getElementById('divisibleRes').innerHTML = "";
     
     //Hide All Other Mods

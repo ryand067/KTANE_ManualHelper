@@ -120,7 +120,7 @@
                         <p>If the customer receives too many chicken nuggets, he dies of obesity. If he receives too little, he will starve to death. Both scenarios will result in your termination.</p>
                         <p># of Chicken Nuggets Requested: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="chickNugs"> &nbsp; <button class="binaryGo" onclick="chickynuggies()" id="chickynuggys">GO</button></p>
                         <p>
-                            <label class="container" class="radio-inline">
+                            <label class="container">
                                 Show First
                                 <input type="radio" name="allOr1" value="first" id="chickyFirst" checked="true">
                                 <span class="checkmark"></span>
@@ -152,19 +152,45 @@
                         <p><i>Who cares about divisibility rules, just use a calculator</i>.</p>
                         <p>This module consists of one screen at the top showing a number, another one at the bottom showing the current stage, a &quot; Yea &quot; button and a &quot; Nay &quot; button.</p>
                         <p>TO solve the module, you have to press the &quot; Yea &quot; or &quot; Nay &quot; button through 3 stages. Go through the rulesand apply the first one that is relevant. Press the &quot; Yea &quot; button if the number is correct according to your answer, and press &quot; Nay &quot; if it's not. Getting a strike will reset the module back to stage 1 and generate new numbers. THe first number means the number generated first regardless of strikes and resets.</p>
-                        <p>Please put the main number from the screen in the 1st text box and the number from the rules in the 2nd text box.</p>
+                        <p>Please put the main number from the screen in the text box and select the rule that matches your bomb for the second number</p>
                         <p><i>If you do not wish to use the look-up function in this manual helper and want to follow the rules exactly as written on the manual, please see Appendix A: Tables to view the Divisibility Module.</i></p>
                         <p><u>Rules:</u></p>
-                        <ul>
-                            <li>If the bomb contains 3 or more batteries, the number must be divisible by 3.</li>
-                            <li>Otherwise, if the bomb contains more lit indicators than unlit ones, the number must be divisible by 9.</li>
-                            <li>Otherwise, if the first displayed number was less than 1,000, the number must be divisible by 6.</li>
-                            <li>Otherwise, if the starting time on the bomb was less thatn 10 minutes, the number must be divisible by 4.</li>
-                            <li>Otherwise, if the last digit of the serial number is even, the nuber must be divisible by 2.</li>
-                            <li>Otherwise, if there is more thant 10 modules on the bomb, the number must be divisible by 5.</li>
-                            <li>Otherwise, the number must be divisibile by 10.</li>
-                        </ul>
-                        <p>Num 1: &nbsp; <input type="number" maxlength="5" size="5" cols="5" class="NumberBoxes" id="divisibleNum"> &nbsp; Num 2: &nbsp; <input type="number" maxlength="2" size="2" cols="2" class="NumberBoxes" id="divisibleNum2"> &nbsp; <button class="binaryGo" onclick="divisibleNumGo()" id="divisibleNumBut">GO</button></p>
+                        <label class="b-contain">
+	                       <span>If the bomb contains 3 or more batteries, the number must be divisible by 3</span>
+	                       <input type="radio" name="divNumRad" value="3" id="divNumRad3" checked="true">
+	                       <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain">
+	                       <span>Otherwise, if the bomb contains more lit indicators than unlit ones, the number must be divisible by 9</span>
+	                       <input type="radio" name="divNumRad" value="9" id="divNumRad9">
+	                       <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain">
+	                       <span>Otherwise, if the first displayed number was less than 1,000, the number must be divisible by 6</span>
+	                       <input type="radio" name="divNumRad" value="6" id="divNumRad6">
+	                       <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain">
+	                       <span>Otherwise, if the starting time on the bomb was less thatn 10 minutes, the number must be divisible by 4</span>
+	                       <input type="radio" name="divNumRad" value="4" id="divNumRad4">
+	                       <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain">
+	                       <span>Otherwise, if the last digit of the serial number is even, the nuber must be divisible by 2</span>
+	                       <input type="radio" name="divNumRad" value="2" id="divNumRad2">
+	                       <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain">
+	                       <span>Otherwise, if there is more thant 10 modules on the bomb, the number must be divisible by 5</span>
+	                       <input type="radio" name="divNumRad" value="5" id="divNumRad5">
+	                       <div class="b-input"></div>
+                        </label>
+                        <label class="b-contain">
+	                       <span>Otherwise, the number must be divisibile by 10</span>
+	                       <input type="radio" name="divNumRad" value="10" id="divNumRad10">
+	                       <div class="b-input"></div>
+                        </label>
+                        <p>Number: &nbsp; <input type="number" maxlength="5" size="7" cols="7" class="NumberBoxes" id="divisibleNum"> &nbsp; <button class="binaryGo" onclick="divisibleNumGo()" id="divisibleNumBut">GO</button></p>
                         <p class="resultBox" id="divisibleRes"></p>
                         <br>
                     </div>
@@ -265,7 +291,7 @@
             <!--Main Clear Button to clear all text on all JS Generated DIVs and text boxes / areas-->
             <p><button class="BUTTON_CLEAR" onclick="clr_fields()" id="ClearButton">CLR</button></p>
             <div id="footer">
-                <p style="color: orange;">&copy; September 2020</p>
+                <p style="color: orange;">&copy; December 2020</p>
                 <p>Click <i><a href="VersionHistory.html">Here</a></i> to view Version History.</p>
                 <p>Click <i><a href="#">Here</a></i> to modify Settings.</p>
                 <p>Click <i><a href="help.html">Here</a></i> to view the Help Screen</p>
@@ -302,7 +328,7 @@
         }
     });
 
-    var input3 = document.getElementById("divisibleNum2");
+    var input3 = document.getElementById("divisibleNum");
     input3.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             event.preventDefault();

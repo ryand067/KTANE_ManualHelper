@@ -149,6 +149,10 @@ iframe {
     border-bottom-width: medium;
 }
 
+.leftAlignRad {
+    text-align: left;
+}
+
 /*Footer Styles*/
 #footer {
     left: 0;
@@ -182,7 +186,8 @@ iframe {
 }
 
 .BUTTON_CLEAR:hover {
-    background: #1E62D0;
+    background: #FF6700;
+    color: #ffffff;
     border: solid #337FED 1px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
