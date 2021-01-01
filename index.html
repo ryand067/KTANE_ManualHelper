@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/radioCss.css">
     <link rel="Stylesheet" href="css/links.css">
+    <link rel="stylesheet" href="css/autocomplete.css">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <script type="text/javascript" src="scripts/mainScript.js"></script>
 </head>
@@ -141,7 +142,9 @@
                         <p>The module contains 5 displays that spell out 5 letter words. Determine if the word shown is in the manual table. Press <strong>YES</strong> if the word is in the munual table. If not press <strong>NO</strong>. Answer five times in a row correctly to solve the module. You will get a strike if one or more of the answers you sent are incorrect.</p>
                         <p>For this manual helper, since the list is so long, the giant table have been replaced with a look-up function. Simply type the word in and recieve a &quot;YES&quot; or &quot;NO&quot; answer to relay to the diffuser.</p>
                         <p><strong>WARNING: </strong>Strikes will not be recorded until after all five words are answered. Even if the first word is answered incorrectly.</p>
-                        <p>Word: &nbsp; <input type="text" maxlength="5" size="5" cols="5" class="NumberBoxes" id="word5"> &nbsp; <button class="binaryGo" onclick="findWord()" id="wordsgobutton" value="submit">GO</button></p>
+                        <div class="autocomplete" style="width: 200px;">
+                            <p>Word: &nbsp; <input type="text" maxlength="5" size="9" cols="9" class="NumberBoxes" id="word5"> &nbsp; <button class="binaryGo" onclick="findWord()" id="wordsgobutton" value="submit">GO</button></p>
+                        </div>
                         <p class="resultBox" id="words5resp"></p>
                         <br>
                     </div>
@@ -218,6 +221,14 @@
                 <p style="color: #0000ff"><i>BLUE</i>: &nbsp; &nbsp; <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="bluebox"> &nbsp; <img src="images/upimg.png" alt="Increment BLUE Counter" class="arrowbuttons" onclick="modifyCounters('BLUE', 1)"> &nbsp; <img src="images/downimg.png" alt="Decrement BLUE Counter" class="arrowbuttons" onclick="modifyCounters('BLUE', 0)"></p>
                 <p style="color: #ffffff"><i>BLACK</i>: &nbsp; <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="blackbox"> &nbsp; <img src="images/upimg.png" alt="Increment BLACK Counter" class="arrowbuttons" onclick="modifyCounters('BLACK', 1)"> &nbsp; <img src="images/downimg.png" alt="Decrement BLACK Counter" class="arrowbuttons" onclick="modifyCounters('BLACK', 0)"></p>
             </div>
+            
+            <!--Password Helper-->
+            <h2>Password</h2>
+            <p>In the section below, start inputting a Password. A list of all valid passwords will come up.</p>
+            <div class="autocomplete" style="width: 150px;">
+                <p>Word: &nbsp; <input type="text" maxlength="5" size="9" cols="9" class="NumberBoxes" id="wordPass"></p>
+            </div>
+            
             <!--Complicated Wires Helper-->
             <h2>Complicated Wires</h2>
             <p>In the section below, refer to the table to decide what to do with each wire, since the venn-diagram provided in the manual is very hard to understand.</p>
@@ -291,7 +302,7 @@
             <!--Main Clear Button to clear all text on all JS Generated DIVs and text boxes / areas-->
             <p><button class="BUTTON_CLEAR" onclick="clr_fields()" id="ClearButton">CLR</button></p>
             <div id="footer">
-                <p style="color: orange;">&copy; December 2020</p>
+                <p style="color: orange;">&copy; January 2021</p>
                 <p>Click <i><a href="VersionHistory.html">Here</a></i> to view Version History.</p>
                 <p>Click <i><a href="#">Here</a></i> to modify Settings.</p>
                 <p>Click <i><a href="help.html">Here</a></i> to view the Help Screen</p>
