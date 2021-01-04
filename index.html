@@ -4,6 +4,7 @@
 <head>
     <!--Head Information such as Title and StyleSheet-->
     <title>Bomb Game Manual</title>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/radioCss.css">
     <link rel="Stylesheet" href="css/links.css">
@@ -73,6 +74,10 @@
                             <li>Flip the switch back <u>up</u> when the bomb timer has the number after the forward slash in the seconds column.</li>
                         </ol>
                         <p>See <i>Appendix A: Tables</i> to view the CrazyTalk Table.</p>
+                        <textarea id="CrazyTalkTextArea" rows="10" cols="30" class="textareaClass"></textarea>
+                        <br><br>
+                        <button class="binaryGo" onclick="CrazyTalkGo()">GO</button>
+                        <p class="resultBox" id="CrazyTalkResponse"></p>
                         <br>
                     </div>
 
@@ -92,7 +97,7 @@
                         <br>
                     </div>
 
-                    <!--Subject of Complicated Buttons-->
+                    <!--Subject of Jack-O'-Lantern-->
                     <h2 onclick="showHide('jackolantern')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="jackolanternArrow"> &nbsp; Subject of Jack-O'-Lantern</h2>
                     <div id="jackolantern">
                         <p><i>Trick or treat!</i></p>
