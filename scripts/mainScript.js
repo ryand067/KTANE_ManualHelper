@@ -9,7 +9,7 @@ class CrazyTalkItem {
     compare(items) {
         return (this.text.localeCompare(items.text));
     }
-}
+};
 
 //Variable Array to hold all of the words needed for the 1,000 Words Module Helper
 var wordsFor5Words = [];
@@ -205,10 +205,8 @@ function binarySearch(arr, word) {
         if (word.trim().localeCompare(arr[mid].trim()) === 0) {
             res = 0;
         } else if (word.trim().localeCompare(arr[mid].trim()) === 1) {
-            //upper = mid - 1;
             lower = mid + 1;
         } else {
-            //lower = mid + 1;
             upper = mid - 1;
         }
         if (res === 0) {
@@ -403,9 +401,13 @@ function loadData() {
     autocomplete(document.getElementById("word5"), wordsFor5Words);
     autocomplete(document.getElementById("wordPass"), passes);
     
-    for (var r = 0; r < CrazyTalkWords.length; r++) {
-        //console.log(CrazyTalkWords[r].text);
+    //First, create a new String Array with the possible results
+    var ctarrstr = [];
+    for (var b = 0; b < CrazyTalkWords.length; b++) {
+        ctarrstr[b] = CrazyTalkWords[b].text;
+        console.log("TEXT: " + ctarrstr[b]);
     }
+    autocomplete(document.getElementById("CrazyTalkTextArea"), ctarrstr);
 }
 
 //Autocomplete Functions

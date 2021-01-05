@@ -74,9 +74,10 @@
                             <li>Flip the switch back <u>up</u> when the bomb timer has the number after the forward slash in the seconds column.</li>
                         </ol>
                         <p>See <i>Appendix A: Tables</i> to view the CrazyTalk Table.</p>
-                        <textarea id="CrazyTalkTextArea" rows="10" cols="30" class="textareaClass"></textarea>
+                        <div class="autocomplete" style="width: 100%;">
+                            <p>CrazyTalk Text: &nbsp; <input type="text" size="9" cols="9" style="width: 40%;" class="NumberBoxes" id="CrazyTalkTextArea"> &nbsp; <button class="binaryGo" onclick="CrazyTalkGo()" id="CrazyTalkSub" value="submit">GO</button></p>
+                        </div>
                         <br><br>
-                        <button class="binaryGo" onclick="CrazyTalkGo()">GO</button>
                         <p class="resultBox" id="CrazyTalkResponse"></p>
                         <br>
                     </div>
@@ -248,7 +249,11 @@
                     </tr>
                     <tr>
                         <th style="color: #ffffff;">White</th>
-                        <td>C</td>
+                        <td>
+                            <div class="tooltip">C
+                                <span class="tooltiptext">Cut the Wire</span>
+                            </div>
+                        </td>
                         <td>D</td>
                         <td>C</td>
                         <td>B</td>
@@ -349,6 +354,14 @@
         if (event.keyCode === 13) {
             event.preventDefault();
             document.getElementById("divisibleNumBut").click();
+        }
+    });
+    
+    var input4 = document.getElementById("CrazyTalkTextArea");
+    input4.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("CrazyTalkSub").click();
         }
     });
 
