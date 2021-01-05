@@ -73,6 +73,7 @@
                             <li>Flip the switch <u>down</u> when the bomb timer has the number before the forward slash in the seconds column.</li>
                             <li>Flip the switch back <u>up</u> when the bomb timer has the number after the forward slash in the seconds column.</li>
                         </ol>
+                        <p>Use either the table in <i>Appendix A</i> to view the crazy talks, or serch below for the desired CrazyTalk.</p>
                         <p>See <i>Appendix A: Tables</i> to view the CrazyTalk Table.</p>
                         <div class="autocomplete" style="width: 100%;">
                             <p>CrazyTalk Text: &nbsp; <input type="text" size="9" cols="9" style="width: 40%;" class="NumberBoxes" id="CrazyTalkTextArea"> &nbsp; <button class="binaryGo" onclick="CrazyTalkGo()" id="CrazyTalkSub" value="submit">GO</button></p>
@@ -251,33 +252,93 @@
                         <th style="color: #ffffff;">White</th>
                         <td>
                             <div class="tooltip">C
-                                <span class="tooltiptext">Cut the Wire</span>
+                                <span class="tooltiptext">Cut</span>
                             </div>
                         </td>
-                        <td>D</td>
-                        <td>C</td>
-                        <td>B</td>
+                        <td>
+                            <div class="tooltip">D
+                                <span class="tooltiptext">Do <b>NOT </b>cut</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">C
+                                <span class="tooltiptext">Cut</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">B
+                                <span class="tooltiptext">Cut if there are 2 or more batteries</span>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <th style="color: #ff0000;">Red</th>
-                        <td>S</td>
-                        <td>B</td>
-                        <td>C</td>
-                        <td>B</td>
+                        <td>
+                            <div class="tooltip">S
+                                <span class="tooltiptext">Cut if the serial number ends in an even digit</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">B
+                                <span class="tooltiptext">Cut if there are 2 or more batteries</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">C
+                                <span class="tooltiptext">Cut</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">B
+                                <span class="tooltiptext">Cut if there are 2 or more batteries</span>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <th style="color: #0000ff;">Blue</th>
-                        <td>S</td>
-                        <td>P</td>
-                        <td>D</td>
-                        <td>P</td>
+                        <td>
+                            <div class="tooltip">S
+                                <span class="tooltiptext">Cut if the serial number ends in an even digit</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">P
+                                <span class="tooltiptext">Cut if there is a parallel port</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">D
+                                <span class="tooltiptext">Do <b>NOT </b>cut</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">P
+                                <span class="tooltiptext">Cut if there is a parallel port</span>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <th><span style="color: #ff0000;">Red</span> <span style="color: #ffffff;">&amp; </span><span style="color: #0000ff;">Blue</span></th>
-                        <td>S</td>
-                        <td>S</td>
-                        <td>P</td>
-                        <td>D</td>
+                        <td>
+                            <div class="tooltip">S
+                                <span class="tooltiptext">Cut if the serial number ends in an even digit</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">S
+                                <span class="tooltiptext">Cut if the serial number ends in an even digit</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">P
+                                <span class="tooltiptext">Cut if there is a parallel port</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tooltip">D
+                                <span class="tooltiptext">Do <b>NOT </b>cut</span>
+                            </div>
+                        </td>
                     </tr>
                 </table>
                 <p>&nbsp;</p>

@@ -245,6 +245,10 @@ iframe {
   z-index: 1;
 }
 
+.tooltip:hover {
+    color: #FFF700;
+}
+
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }

@@ -142,10 +142,14 @@ function additionGo() {
         if (isNaN(lines[i])) {
             allNums = false;
             break;
-        }
+        } else if (lines[i] === "") {
+            
+            //Do Nothing
+        } else {
         
-        //If the number is valid, add it to the current sum
-        sum += parseInt(lines[i]);
+            //If the number is valid, add it to the current sum
+            sum += parseInt(lines[i]);
+        }
     }
     
     //Output the results to the user
@@ -405,7 +409,7 @@ function loadData() {
     var ctarrstr = [];
     for (var b = 0; b < CrazyTalkWords.length; b++) {
         ctarrstr[b] = CrazyTalkWords[b].text;
-        console.log("TEXT: " + ctarrstr[b]);
+        //console.log("TEXT: " + ctarrstr[b]);
     }
     autocomplete(document.getElementById("CrazyTalkTextArea"), ctarrstr);
 }
