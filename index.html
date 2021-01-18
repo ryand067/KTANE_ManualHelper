@@ -58,7 +58,7 @@
                         <p><strong>NOTE: Do NOT prepend &quot;0&quot;s to your number. There will ALWAYS be 10 numbers to add together.</strong></p>
                         <textarea id="additionTextArea" rows="10" cols="5" class="textareaClass"></textarea>
                         <br><br>
-                        <button class="binaryGo" onclick="additionGo()">GO</button>
+                        <button class="binaryGo" onclick="additionGo()">GO</button> <!--&nbsp; &nbsp; <button class="binaryGo" onclick="">RE</button>-->
                         <p class="resultBox" id="additonResponse"></p>
                         <br>
                     </div>
@@ -423,6 +423,14 @@
         if (event.keyCode === 13) {
             event.preventDefault();
             document.getElementById("CrazyTalkSub").click();
+        }
+    });
+    
+    var input5 = document.getElementById("body");
+    input4.addEventListener("keyup", function(event) {
+        if (event.keyCode === 16 && event.keyCode == 17 && event.keyCode == 65) {
+            event.preventDefault();
+            document.getElementById("ClearButton").click();
         }
     });
 

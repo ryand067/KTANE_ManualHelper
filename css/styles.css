@@ -44,7 +44,8 @@ ul {
     background-color: #575757;
     color: rgba(211, 211, 54, 0.69);
     font-size: 120%;
-    width: 6ch;
+    width: 8ch;
+    border-radius: 5px;
 }
 
 .arrowbuttons {
@@ -147,6 +148,7 @@ iframe {
     font-size: 120%;
     border-color: #c0c0c0;
     border-bottom-width: medium;
+    border-radius: 5px;
 }
 
 .leftAlignRad {
