@@ -166,39 +166,39 @@
                         <p><i>If you do not wish to use the look-up function in this manual helper and want to follow the rules exactly as written on the manual, please see Appendix A: Tables to view the Divisibility Module.</i></p>
                         <p><u>Rules:</u></p>
                         <label class="b-contain">
-	                       <span>If the bomb contains 3 or more batteries, the number must be divisible by 3</span>
-	                       <input type="radio" name="divNumRad" value="3" id="divNumRad3" checked="true">
-	                       <div class="b-input"></div>
+							<span>If the bomb contains 3 or more batteries, the number must be divisible by 3</span>
+							<input type="radio" name="divNumRad" value="3" id="divNumRad3" checked="true">
+							<div class="b-input"></div>
                         </label>
                         <label class="b-contain">
-	                       <span>Otherwise, if the bomb contains more lit indicators than unlit ones, the number must be divisible by 9</span>
-	                       <input type="radio" name="divNumRad" value="9" id="divNumRad9">
-	                       <div class="b-input"></div>
+							<span>Otherwise, if the bomb contains more lit indicators than unlit ones, the number must be divisible by 9</span>
+							<input type="radio" name="divNumRad" value="9" id="divNumRad9">
+							<div class="b-input"></div>
                         </label>
                         <label class="b-contain">
-	                       <span>Otherwise, if the first displayed number was less than 1,000, the number must be divisible by 6</span>
-	                       <input type="radio" name="divNumRad" value="6" id="divNumRad6">
-	                       <div class="b-input"></div>
+							<span>Otherwise, if the first displayed number was less than 1,000, the number must be divisible by 6</span>
+							<input type="radio" name="divNumRad" value="6" id="divNumRad6">
+							<div class="b-input"></div>
                         </label>
                         <label class="b-contain">
-	                       <span>Otherwise, if the starting time on the bomb was less thatn 10 minutes, the number must be divisible by 4</span>
-	                       <input type="radio" name="divNumRad" value="4" id="divNumRad4">
-	                       <div class="b-input"></div>
+							<span>Otherwise, if the starting time on the bomb was less thatn 10 minutes, the number must be divisible by 4</span>
+							<input type="radio" name="divNumRad" value="4" id="divNumRad4">
+							<div class="b-input"></div>
                         </label>
                         <label class="b-contain">
-	                       <span>Otherwise, if the last digit of the serial number is even, the nuber must be divisible by 2</span>
-	                       <input type="radio" name="divNumRad" value="2" id="divNumRad2">
-	                       <div class="b-input"></div>
+							<span>Otherwise, if the last digit of the serial number is even, the nuber must be divisible by 2</span>
+							<input type="radio" name="divNumRad" value="2" id="divNumRad2">
+							<div class="b-input"></div>
                         </label>
                         <label class="b-contain">
-	                       <span>Otherwise, if there is more thant 10 modules on the bomb, the number must be divisible by 5</span>
-	                       <input type="radio" name="divNumRad" value="5" id="divNumRad5">
-	                       <div class="b-input"></div>
+							<span>Otherwise, if there is more thant 10 modules on the bomb, the number must be divisible by 5</span>
+							<input type="radio" name="divNumRad" value="5" id="divNumRad5">
+							<div class="b-input"></div>
                         </label>
                         <label class="b-contain">
-	                       <span>Otherwise, the number must be divisibile by 10</span>
-	                       <input type="radio" name="divNumRad" value="10" id="divNumRad10">
-	                       <div class="b-input"></div>
+							<span>Otherwise, the number must be divisibile by 10</span>
+							<input type="radio" name="divNumRad" value="10" id="divNumRad10">
+							<div class="b-input"></div>
                         </label>
                         <p>Number: &nbsp; <input type="number" maxlength="5" size="7" cols="7" class="NumberBoxes" id="divisibleNum"> &nbsp; <button class="binaryGo" onclick="divisibleNumGo()" id="divisibleNumBut">GO</button></p>
                         <p class="resultBox" id="divisibleRes"></p>
@@ -216,41 +216,13 @@
 							<li>Note: &quot;chr.&quot; stands for &quot;Character.&quot;</li>
 						</ul>
 						<br><p>The List...</p>
-						<table>
-							<tr>
-								<th>Sentence</th>
-								<th>Chr.</th>
-								<th>Sentence</th>
-								<th>Chr.</th>
-								<th>Sentence</th>
-								<th>Chr.</th>
-							</tr>
-							<tr>
-								<td>Bon appetit</td>
-								<td>0</td>
-								<td>Caesar Salad</td>
-								<td>1</td>
-								<td>Hate to break it to ya</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td>This is awkward</td>
-								<td>3</td>
-								<td>Clichè</td>
-								<td>4</td>
-								<td>It's intense</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td>Binge watch</td>
-								<td>6</td>
-								<td>You're an amateur</td>
-								<td>7</td>
-								<td>Manhattan</td>
-								<td>8</td>
-							</tr>
-						</table>
-						<!--HERE-->
+						<p><i>To begin, start serching for a phrase to find...</i></p>
+						<div class="autocomplete" style="width: 100%;">
+                            <p>Phrase Text: &nbsp; <input type="text" size="9" cols="9" style="width: 40%;" class="NumberBoxes" id="BoneAppleTeaTextArea"> &nbsp; <button class="binaryGo" onclick="BoneAppleTeaGo()" id="BoneAppleTeaSub" value="submit">GO</button></p>
+                        </div>
+                        <br><br>
+                        <p class="resultBox" id="BoneAppleTeaResponse"></p>
+                        <br>
 					</div>
                 </div>
                 <br>
@@ -471,6 +443,14 @@
         if (event.keyCode === 13) {
             event.preventDefault();
             document.getElementById("CrazyTalkSub").click();
+        }
+    });
+	
+	var input6 = document.getElementById("BoneAppleTeaTextArea");
+    input6.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("BoneAppleTeaSub").click();
         }
     });
     

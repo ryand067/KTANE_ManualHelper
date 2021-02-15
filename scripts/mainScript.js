@@ -11,11 +11,22 @@ class CrazyTalkItem {
     }
 };
 
+class boneAppleTeaItem {
+	constructor(text, chara) {
+		this.text = text;
+		this.chara = chara;
+	}
+	
+	compare(items) {
+		return this.text.localeCompare(items.text);
+	}
+};
+
 //Variable Array to hold all of the words needed for the 1,000 Words Module Helper
 var wordsFor5Words = [];
 var passes = ["about", "after", "again", "below", "could", "every", "first", "found", "great", "house", "large", "learn", "never", "other", "place", "plant", "point", "right", "small", "sound", "spell",
              "still", "study", "their", "there", "these", "thing", "think", "three", "water", "where", "which", "world", "would", "write"];
-var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC"];
+var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC", "boneAppleTea"];
 var CrazyTalkWords = [new CrazyTalkItem("< < > < > >", 5, 4), new CrazyTalkItem("1 3 2 4", 3, 2), new CrazyTalkItem("LEFT ARROW LEFT WORD RIGHT ARROW LEFT WORD RIGHT ARROW RIGHT WORD", 5, 8),
                      new CrazyTalkItem("BLANK", 1, 3), new CrazyTalkItem("LITERALLY BLANK", 1, 5), new CrazyTalkItem("FOR THE LOVE OF ALL THAT IS GOOD AND HOLY PLEASE FULLSTOP FULLSTOP.", 9, 0),
                      new CrazyTalkItem("AN ACTUAL LEFT ARROW LITERAL PHRASE", 5, 3), new CrazyTalkItem("FOR THE LOVE OF - THE DISPLAY JUST CHANGED, I DIDNT KNOW THIS MOD COULD DO THAT. DOES IT MENTION THAT IN THE MANUAL?", 8, 7), new CrazyTalkItem("ALL WORDS ONE THREE TO FOR FOR AS IN THIS IS FOR YOU", 4, 0), new CrazyTalkItem("LITERALLY NOTHING", 1, 4), new CrazyTalkItem("NO, LITERALLY NOTHING", 2, 5),
@@ -30,6 +41,20 @@ var CrazyTalkWords = [new CrazyTalkItem("< < > < > >", 5, 4), new CrazyTalkItem(
                      new CrazyTalkItem("LEFT ARROW", 6, 8), new CrazyTalkItem("AFTER I SAY BEEP FIND THIS PHRASE WORD FOR WORD BEEP AN ACTUAL LEFT ARROW", 7, 2), new CrazyTalkItem("ONE THREE 2 WITH TWO OHS 4", 4, 3),
                      new CrazyTalkItem("LEFT ARROW SYMBOL", 6, 4), new CrazyTalkItem("AN ACTUAL LEFT ARROW", 6, 2), new CrazyTalkItem("THATS WHAT ITS SHOWING", 2, 1), new CrazyTalkItem("THE PHRASE THE WORD NOTHING", 2, 6), new CrazyTalkItem("THE WORD ONE AND THEN THE NUMBERS 3 2 4", 4, 8), new CrazyTalkItem("ONE 3 2 FOUR", 3, 8), new CrazyTalkItem("ONE WORD THEN PUNCTUATION. STOP STOP.", 0, 9),
                      new CrazyTalkItem("THE WORD BLANK", 0, 1), new CrazyTalkItem("FULLSTOP FULLSTOP", 8, 4)];
+
+var boneAppleTeaPhrases = [new boneAppleTeaItem("Bon appetit", '0'), new boneAppleTeaItem("Caesar Salad", '1'), new boneAppleTeaItem("Hate to break it to ya", '2'),
+					new boneAppleTeaItem("This is awkward", '3'), new boneAppleTeaItem("Cliche", '4'), new boneAppleTeaItem("its intense", '5'),
+					new boneAppleTeaItem("Binge watch", '6'), new boneAppleTeaItem("Youre an amateur", '7'), new boneAppleTeaItem("Manhattan", '8'),
+					new boneAppleTeaItem("Trial and error", '9'), new boneAppleTeaItem("Millionaire", 'A'), new boneAppleTeaItem("Diabetes", 'B'),
+					new boneAppleTeaItem("Russian roulette", 'C'), new boneAppleTeaItem("Knight in shining armor", 'D'), new boneAppleTeaItem("What a nice gesture", 'E'),
+					new boneAppleTeaItem("Insomnia", 'F'), new boneAppleTeaItem("This is my masterpiece", 'G'), new boneAppleTeaItem("Im in a cul de sac", 'H'),
+					new boneAppleTeaItem("Serial killer", 'I'), new boneAppleTeaItem("I come here often", 'J'), new boneAppleTeaItem("Sleight of hand", 'K'),
+					new boneAppleTeaItem("Tesla", 'L'), new boneAppleTeaItem("Refreshing champagne", 'M'), new boneAppleTeaItem("Im being more specific", 'N'),
+					new boneAppleTeaItem("God bless you", 'O'), new boneAppleTeaItem("PC software", 'P'), new boneAppleTeaItem("Sense of humor", 'Q'),
+					new boneAppleTeaItem("The three musketeers", 'R'), new boneAppleTeaItem("Third dimension", 'S'), new boneAppleTeaItem("Praying mantis", 'T'),
+					new boneAppleTeaItem("Hand me downs", 'U'), new boneAppleTeaItem("	Yum, a quesadilla", 'V'), new boneAppleTeaItem("Daddy long legs", 'W'),
+					new boneAppleTeaItem("Cant merge, let alone drive", 'X'), new boneAppleTeaItem("My guess is...", 'Y'), new boneAppleTeaItem("Sync", 'Z'),
+					new boneAppleTeaItem("You lack it", '&'), new boneAppleTeaItem("Admit defeat", '$')];
 
 //Function to increase and decrease number of each color wires in Sequences
 function modifyCounters(color, direction) {
@@ -178,6 +203,23 @@ function CrazyTalkGo() {
     }
 }
 
+//Crazy Talk Function
+function BoneAppleTeaGo() {
+    
+    //Set input and outputs
+    var input = document.getElementById('BoneAppleTeaTextArea').value.toUpperCase();
+    var output = document.getElementById('BoneAppleTeaResponse');
+    document.getElementById('BoneAppleTeaTextArea').value = "";
+    
+    //If the search finds it, report to the user that it was found and the up and down values. Otherwise report that it wasn't
+    var bsRes = search(boneAppleTeaPhrases, input);
+    if (bsRes === -1) {
+        output.innerHTML = "Phrase <i>" + input + "</i> not found!";
+    } else {
+        output.innerHTML = "Phrase <i>" + input + "</i> Found!<br> &emsp; Character: " + boneAppleTeaPhrases[bsRes].chara;
+    }
+}
+
 //1,000 Words Function
 function findWord() {
     
@@ -292,6 +334,7 @@ function clr_fields() {
 	document.getElementById('blackbox').value = 0;
 	document.getElementById('MemoryTextArea').value = "";
     document.getElementById("CrazyTalkTextArea").value = "";
+	document.getElementById("BoneAppleTeaTextArea").value = "";
     document.getElementById('chickNugs').value = "";
     document.getElementById('chickNugsRes').innerHTML = "";
     document.getElementById('additionTextArea').value = "";
@@ -307,6 +350,7 @@ function clr_fields() {
     document.getElementById('divisibleNum').value = "";
     document.getElementById('divisibleRes').innerHTML = "";
     document.getElementById("CrazyTalkResponse").innerHTML = "";
+	document.getElementById("BoneAppleTeaResponse").innerHTML = "";
     
     //Hide All Other Mods
     for (var a = 0; a < divs.length; a++) {
@@ -408,9 +452,16 @@ function loadData() {
     var ctarrstr = [];
     for (var b = 0; b < CrazyTalkWords.length; b++) {
         ctarrstr[b] = CrazyTalkWords[b].text;
-        //console.log("TEXT: " + ctarrstr[b]);
+        console.log("TEXT: " + ctarrstr[b]);
     }
     autocomplete(document.getElementById("CrazyTalkTextArea"), ctarrstr);
+	
+	var ctarrstr2 = [];
+	for (var b = 0; b < boneAppleTeaPhrases.length; b++) {
+		ctarrstr2[b] = boneAppleTeaPhrases[b].text;
+		console.log("TEXT: " + ctarrstr2[b]);
+	}
+	autocomplete(document.getElementById("BoneAppleTeaTextArea"), ctarrstr2);
 }
 
 //Autocomplete Functions
