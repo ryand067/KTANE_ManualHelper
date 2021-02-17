@@ -22,11 +22,9 @@ class boneAppleTeaItem {
 	}
 };
 
-//Variable Array to hold all of the words needed for the 1,000 Words Module Helper
-var wordsFor5Words = [];
 var passes = ["about", "after", "again", "below", "could", "every", "first", "found", "great", "house", "large", "learn", "never", "other", "place", "plant", "point", "right", "small", "sound", "spell",
              "still", "study", "their", "there", "these", "thing", "think", "three", "water", "where", "which", "world", "would", "write"];
-var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC", "boneAppleTea"];
+
 var CrazyTalkWords = [new CrazyTalkItem("< < > < > >", 5, 4), new CrazyTalkItem("1 3 2 4", 3, 2), new CrazyTalkItem("LEFT ARROW LEFT WORD RIGHT ARROW LEFT WORD RIGHT ARROW RIGHT WORD", 5, 8),
                      new CrazyTalkItem("BLANK", 1, 3), new CrazyTalkItem("LITERALLY BLANK", 1, 5), new CrazyTalkItem("FOR THE LOVE OF ALL THAT IS GOOD AND HOLY PLEASE FULLSTOP FULLSTOP.", 9, 0),
                      new CrazyTalkItem("AN ACTUAL LEFT ARROW LITERAL PHRASE", 5, 3), new CrazyTalkItem("FOR THE LOVE OF - THE DISPLAY JUST CHANGED, I DIDNT KNOW THIS MOD COULD DO THAT. DOES IT MENTION THAT IN THE MANUAL?", 8, 7), new CrazyTalkItem("ALL WORDS ONE THREE TO FOR FOR AS IN THIS IS FOR YOU", 4, 0), new CrazyTalkItem("LITERALLY NOTHING", 1, 4), new CrazyTalkItem("NO, LITERALLY NOTHING", 2, 5),
@@ -42,19 +40,23 @@ var CrazyTalkWords = [new CrazyTalkItem("< < > < > >", 5, 4), new CrazyTalkItem(
                      new CrazyTalkItem("LEFT ARROW SYMBOL", 6, 4), new CrazyTalkItem("AN ACTUAL LEFT ARROW", 6, 2), new CrazyTalkItem("THATS WHAT ITS SHOWING", 2, 1), new CrazyTalkItem("THE PHRASE THE WORD NOTHING", 2, 6), new CrazyTalkItem("THE WORD ONE AND THEN THE NUMBERS 3 2 4", 4, 8), new CrazyTalkItem("ONE 3 2 FOUR", 3, 8), new CrazyTalkItem("ONE WORD THEN PUNCTUATION. STOP STOP.", 0, 9),
                      new CrazyTalkItem("THE WORD BLANK", 0, 1), new CrazyTalkItem("FULLSTOP FULLSTOP", 8, 4)];
 
-var boneAppleTeaPhrases = [new boneAppleTeaItem("Bon appetit", '0'), new boneAppleTeaItem("Caesar Salad", '1'), new boneAppleTeaItem("Hate to break it to ya", '2'),
-					new boneAppleTeaItem("This is awkward", '3'), new boneAppleTeaItem("Cliche", '4'), new boneAppleTeaItem("its intense", '5'),
-					new boneAppleTeaItem("Binge watch", '6'), new boneAppleTeaItem("Youre an amateur", '7'), new boneAppleTeaItem("Manhattan", '8'),
-					new boneAppleTeaItem("Trial and error", '9'), new boneAppleTeaItem("Millionaire", 'A'), new boneAppleTeaItem("Diabetes", 'B'),
-					new boneAppleTeaItem("Russian roulette", 'C'), new boneAppleTeaItem("Knight in shining armor", 'D'), new boneAppleTeaItem("What a nice gesture", 'E'),
-					new boneAppleTeaItem("Insomnia", 'F'), new boneAppleTeaItem("This is my masterpiece", 'G'), new boneAppleTeaItem("Im in a cul de sac", 'H'),
-					new boneAppleTeaItem("Serial killer", 'I'), new boneAppleTeaItem("I come here often", 'J'), new boneAppleTeaItem("Sleight of hand", 'K'),
-					new boneAppleTeaItem("Tesla", 'L'), new boneAppleTeaItem("Refreshing champagne", 'M'), new boneAppleTeaItem("Im being more specific", 'N'),
-					new boneAppleTeaItem("God bless you", 'O'), new boneAppleTeaItem("PC software", 'P'), new boneAppleTeaItem("Sense of humor", 'Q'),
-					new boneAppleTeaItem("The three musketeers", 'R'), new boneAppleTeaItem("Third dimension", 'S'), new boneAppleTeaItem("Praying mantis", 'T'),
-					new boneAppleTeaItem("Hand me downs", 'U'), new boneAppleTeaItem("	Yum, a quesadilla", 'V'), new boneAppleTeaItem("Daddy long legs", 'W'),
-					new boneAppleTeaItem("Cant merge, let alone drive", 'X'), new boneAppleTeaItem("My guess is...", 'Y'), new boneAppleTeaItem("Sync", 'Z'),
-					new boneAppleTeaItem("You lack it", '&'), new boneAppleTeaItem("Admit defeat", '$')];
+var boneAppleTeaPhrases = [new boneAppleTeaItem("BON APPETIT", '0'), new boneAppleTeaItem("CEASAR SALAD", '1'), new boneAppleTeaItem("HATE TO BREAK IT TO YA", '2'),
+					new boneAppleTeaItem("THIS IS AWKWARD", '3'), new boneAppleTeaItem("CLICHE", '4'), new boneAppleTeaItem("ITS INTENSE", '5'),
+					new boneAppleTeaItem("BINGE WATCH", '6'), new boneAppleTeaItem("YOURE AN AMATEUR", '7'), new boneAppleTeaItem("MANHATTAN", '8'),
+					new boneAppleTeaItem("TRIAL AND ERROR", '9'), new boneAppleTeaItem("MILLIONAIRE", 'A'), new boneAppleTeaItem("DIABETES", 'B'),
+					new boneAppleTeaItem("RUSSIAN ROULETTE", 'C'), new boneAppleTeaItem("KNIGHT IN SHINING ARMOR", 'D'), new boneAppleTeaItem("WHAT A NICE GESTURE", 'E'),
+					new boneAppleTeaItem("INSOMNIA", 'F'), new boneAppleTeaItem("THIS IS MY MASTERPIECE", 'G'), new boneAppleTeaItem("IM IN A CUL DE SAC", 'H'),
+					new boneAppleTeaItem("SERIAL KILLER", 'I'), new boneAppleTeaItem("I COME HERE OFTEN", 'J'), new boneAppleTeaItem("SLEIGHT OF HAND", 'K'),
+					new boneAppleTeaItem("TESLA", 'L'), new boneAppleTeaItem("REFRESHING CHAMPAGNE", 'M'), new boneAppleTeaItem("IM BEING MORE SPECIFIC", 'N'),
+					new boneAppleTeaItem("GOD BLESS YOU", 'O'), new boneAppleTeaItem("PC SOFTWARE", 'P'), new boneAppleTeaItem("SENSE OF HUMOR", 'Q'),
+					new boneAppleTeaItem("THE THREE MUSKETEERS", 'R'), new boneAppleTeaItem("THIRD DIMENSION", 'S'), new boneAppleTeaItem("PRAYING MANTIS", 'T'),
+					new boneAppleTeaItem("HAND ME DOWNS", 'U'), new boneAppleTeaItem("YUM, A QUESADILLA", 'V'), new boneAppleTeaItem("DADDY LONG LEGS", 'W'),
+					new boneAppleTeaItem("CANT MERGE, LET ALONE DRIVE", 'X'), new boneAppleTeaItem("MY GUESS IS...", 'Y'), new boneAppleTeaItem("SYNC", 'Z'),
+					new boneAppleTeaItem("YOU LACK IT", '&'), new boneAppleTeaItem("ADMIT DEFEAT", '$')];
+
+//Variable Array to hold all of the words needed for the 1,000 Words Module Helper
+var wordsFor5Words = [];
+var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC", "boneAppleTea"];
 
 //Function to increase and decrease number of each color wires in Sequences
 function modifyCounters(color, direction) {
@@ -452,14 +454,14 @@ function loadData() {
     var ctarrstr = [];
     for (var b = 0; b < CrazyTalkWords.length; b++) {
         ctarrstr[b] = CrazyTalkWords[b].text;
-        console.log("TEXT: " + ctarrstr[b]);
+        //console.log("TEXT: " + ctarrstr[b]);
     }
     autocomplete(document.getElementById("CrazyTalkTextArea"), ctarrstr);
 	
 	var ctarrstr2 = [];
 	for (var b = 0; b < boneAppleTeaPhrases.length; b++) {
 		ctarrstr2[b] = boneAppleTeaPhrases[b].text;
-		console.log("TEXT: " + ctarrstr2[b]);
+		//console.log("TEXT: " + ctarrstr2[b]);
 	}
 	autocomplete(document.getElementById("BoneAppleTeaTextArea"), ctarrstr2);
 }
