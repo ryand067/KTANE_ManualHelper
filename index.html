@@ -45,6 +45,10 @@
                 <iframe src="https://ktane.timwi.de/HTML/The%20Jack-O%E2%80%99-Lantern.html" id="tableC">
                     Sorry your browser does not support inline frames.
                 </iframe>
+                <p onclick="showHide('tableD')"><img alt="Click to Show / Hide" src="images/closeArrow.png" class="clickableArrows" id="tableDArrow">&nbsp; TABLE 4: Clue (Murder) Table</p>
+                <iframe src="https://ktane.timwi.de/HTML/Murder.html" id="tableD">
+                    Sorry your browser does not support inline frames.
+                </iframe>
                 <br><br><br>
 
                 <!--Modded Modules-->
@@ -114,6 +118,105 @@
                         <br>
                         <p>See <i>Appendix A: Tables</i> to view the Jack-O'-Lantern Table.</p>
                         <br>
+                    </div>
+                    
+                    <!--Subject of CLUE-->
+                    <h2 onclick="showHide('Clue')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="ClueArrow"> &nbsp; Subject of Clue (Murder)</h2>
+                    <div id="Clue">
+                        <p><i>This module is powered by the restless soul of a murder victim. The only way to disarm it is to solve the case so the victim can pass peacefully to the afterlife. <span style="color: #FF6700">( Like Melinda's job :D )</span></i></p>
+                        <p><i>See Appendix A for indicator identification reference.<br>
+                            See Appendix B for battery identification reference.<br>
+                            See Appendix C for port identification reference.</i>
+                        </p>
+                        <ul>
+                            <li>Select the murderer, murder weapon, and location on the display panels and press &quot;ACCUSE&quot; to disarm the module.</li>
+                            <li>The module displays one location in red; this is the room in which the body was found. <b>It is not necessarily the room in which the crime occurred.</b></li>
+                            <li>The table in <i>Appendix A: Table 4</i> above shows the location of the suspects and potential weapons at the time of the murder. The murderer must have been in the same location as the murder weapon at this time.</li>
+                            <li>Some suspects and potential weapons have already been eliminated from the investigation; these are not listed on the module.</li>
+                        </ul>
+                        <h3>Suspects</h3>
+                        <ul>
+                            <li>If there is a lit indicator with label <i>TRN</i>, use row 5 to locate the suspects.</li>
+                            <li>Otherwise, if the body was found in the Dining Room, use row 7.</li>
+                            <li>Otherwise, if the bomb has 2 or more Stereo RCA ports, use row 8.</li>
+                            <li>Otherwise, if there are no D batteries on the bomb, use row 2.</li>
+                            <li>Otherwise, if the body was found in the Study, use row 4.</li>
+                            <li>Otherwise, if there are 5 or more batteries, use row 9.</li>
+                            <li>Otherwise, if there is an unlit indicator with label <i>FRQ</i>, use row 1.</li>
+                            <li>Otherwise, if the body was found in the Conservatory, use row 3.</li>
+                            <li>Otherwise, the suspects can be located using row 6.</li>
+                        </ul>
+                        <h3>Weapons</h3>
+                        <ul>
+                            <li>If the body was found in the Lounge, use row 3 to locate the weapons.</li>
+                            <li>Otherwise, if there are 5 or more batteries, use row 1.</li>
+                            <li>Otherwise, if the bomb has a serial port, use row 9.</li>
+                            <li>Otherwise, if the body was found in the Billiard Room, use row 4.</li>
+                            <li>Otherwise, if there are no batteries on the bomb, use row 6.</li>
+                            <li>Otherwise, if there are no lit indicators on the bomb, use row 5.</li>
+                            <li>Otherwise, if the body was found in the Hall, use row 7.</li>
+                            <li>Otherwise, if the bomb has 2 or more Stereo RCA ports, use row 2.</li>
+                            <li>Otherwise, the weapons can be located using row 8.</li>
+                        </ul>
+                        <h3>Locations</h3>
+                        <p>See The table in <i>Appendix A: Table 4</i> above for the list of possible Location Combonations.</p>
+                        <h3>Helper Tools</h3>
+                        <div id="formHolder" style="text-align: left; width: 50%; float: left">
+                            <form action="#">
+                                <p>
+                                 <input type="checkbox" id="test1" />
+                                 <label for="test1">Miss Scarlett</label>
+                             </p>
+                             <p>
+                                <input type="checkbox" id="test2" />
+                                <label for="test2">Professor Plum</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test3"/>
+                                    <label for="test3">Mrs. Peacock</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test4"/>
+                                    <label for="test4">Reverend Green</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test5"/>
+                                    <label for="test5">Colonel Mustard</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test6"/>
+                                    <label for="test6">Mrs. White</label>
+                                </p>
+                            </form>
+                        </div>
+                        <div id="formHolder" style="text-align: left; width: 50%; float: right">
+                            <form action="#">
+                                <p>
+                                 <input type="checkbox" id="test01" />
+                                 <label for="test01">Miss Scarlett</label>
+                             </p>
+                             <p>
+                                <input type="checkbox" id="test02" />
+                                <label for="test02">Professor Plum</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test03"/>
+                                    <label for="test03">Mrs. Peacock</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test04"/>
+                                    <label for="test04">Reverend Green</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test05"/>
+                                    <label for="test05">Colonel Mustard</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test06"/>
+                                    <label for="test06">Mrs. White</label>
+                                </p>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div id="other_right">

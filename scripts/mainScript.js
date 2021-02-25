@@ -56,7 +56,7 @@ var boneAppleTeaPhrases = [new boneAppleTeaItem("BON APPETIT", '0'), new boneApp
 
 //Variable Array to hold all of the words needed for the 1,000 Words Module Helper
 var wordsFor5Words = [];
-var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC", "boneAppleTea"];
+var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC", "tableD", "boneAppleTea", "Clue"];
 
 //Function to increase and decrease number of each color wires in Sequences
 function modifyCounters(color, direction) {
