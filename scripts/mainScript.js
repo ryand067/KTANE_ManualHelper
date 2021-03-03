@@ -57,6 +57,7 @@ var boneAppleTeaPhrases = [new boneAppleTeaItem("BON APPETIT", '0'), new boneApp
 //Variable Array to hold all of the words needed for the 1,000 Words Module Helper
 var wordsFor5Words = [];
 var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC", "tableD", "boneAppleTea", "Clue"];
+var clueFields = ["test1", "test2", "test3", "test4", "test5", "test6", "test01", "test02", "test03", "test04", "test05", "test06"];
 
 //Function to increase and decrease number of each color wires in Sequences
 function modifyCounters(color, direction) {
@@ -345,6 +346,8 @@ function clr_fields() {
     document.getElementById('words5resp').innerHTML = "";
     document.getElementById('chickyFirst').checked = true;
     document.getElementById('divNumRad3').checked = true;
+    document.getElementById('clueA').checked = true;
+    document.getElementById('clueA').checked = false;
     document.getElementById('chickyAll').checked = false;
     document.getElementById('moduloN').value = "";
     document.getElementById('moduloM').value = "";
@@ -357,6 +360,11 @@ function clr_fields() {
     //Hide All Other Mods
     for (var a = 0; a < divs.length; a++) {
         hideDiv(divs[a]);
+    }
+    
+    //Clear Clue Fields
+    for (var a = 0; a < clueFields.length; a++) {
+        document.getElementById(clueFields[a]).checked = false;
     }
 }
 
