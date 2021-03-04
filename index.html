@@ -59,11 +59,13 @@
                     <!--Subject of Addition-->
                     <h2 onclick="showHide('addition')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="additionArrow"> &nbsp; Subject of Addition</h2>
                     <div id="addition">
-                        <p>Compute the sum on the display and enter it using the numbered buttons to solve the module. Use the grey &quot;A&quot; button to cycle through 10 numbers which will need added together. Use the red &quot;C&quot; button to clear your input, and the &quot;+&quot; button to submit it.</p>
+                        <p>Compute the sum on the display and enter it using the numbered buttons to solve the module. Use the grey &quot;A&quot; button to cycle through 10 numbers which will need added together. Use the red &quot;C&quot; button to clear
+                            your input, and the &quot;+&quot; button to submit it.</p>
                         <p><strong>NOTE: Do NOT prepend &quot;0&quot;s to your number. There will ALWAYS be 10 numbers to add together.</strong></p>
                         <textarea id="additionTextArea" rows="10" cols="5" class="textareaClass"></textarea>
                         <br><br>
-                        <button class="binaryGo" onclick="additionGo()">GO</button> <!--&nbsp; &nbsp; <button class="binaryGo" onclick="">RE</button>-->
+                        <button class="binaryGo" onclick="additionGo()">GO</button>
+                        <!--&nbsp; &nbsp; <button class="binaryGo" onclick="">RE</button>-->
                         <p class="resultBox" id="additonResponse"></p>
                         <br>
                     </div>
@@ -99,7 +101,8 @@
                         <p>Whichever method you prefer to use, once you have calculated the correct answer, enter it into the keypad and press the green submit button.</p>
                         <p>To clear your answer, press the red clear button.</p>
                         <p>Entering the correct answer will disarm the module. Entering an incorrect answer will cause a strike and reset both, m and n.</p>
-                        <p>n: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloN"> &nbsp; m: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloM"> &nbsp; <button class="binaryGo" onclick="modulosGo()" id="modgo">GO</button></p>
+                        <p>n: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloN"> &nbsp; m: &nbsp; <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="moduloM"> &nbsp; <button class="binaryGo"
+                                onclick="modulosGo()" id="modgo">GO</button></p>
                         <p class="resultBox" id="modRes"></p>
                         <br>
                     </div>
@@ -119,7 +122,7 @@
                         <p>See <i>Appendix A: Tables</i> to view the Jack-O'-Lantern Table.</p>
                         <br>
                     </div>
-                    
+
                     <!--Subject of CLUE-->
                     <h2 onclick="showHide('Clue')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="ClueArrow"> &nbsp; Subject of Clue (Murder)</h2>
                     <div id="Clue">
@@ -164,27 +167,27 @@
                         <div id="formHolder" style="text-align: left; width: 50%; float: left">
                             <form action="#">
                                 <p>
-                                 <input type="checkbox" id="test1" />
-                                 <label for="test1">Miss Scarlett</label>
-                             </p>
-                             <p>
-                                <input type="checkbox" id="test2" />
-                                <label for="test2">Professor Plum</label>
+                                    <input type="checkbox" id="test1" />
+                                    <label for="test1">Miss Scarlett</label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" id="test3"/>
+                                    <input type="checkbox" id="test2" />
+                                    <label for="test2">Professor Plum</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test3" />
                                     <label for="test3">Mrs. Peacock</label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" id="test4"/>
+                                    <input type="checkbox" id="test4" />
                                     <label for="test4">Reverend Green</label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" id="test5"/>
+                                    <input type="checkbox" id="test5" />
                                     <label for="test5">Colonel Mustard</label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" id="test6"/>
+                                    <input type="checkbox" id="test6" />
                                     <label for="test6">Mrs. White</label>
                                 </p>
                             </form>
@@ -192,82 +195,85 @@
                         <div id="formHolder" style="text-align: left; width: 50%; float: left">
                             <form action="#">
                                 <p>
-                                 <input type="checkbox" id="test01" />
-                                 <label for="test01">Candle Stick</label>
-                             </p>
-                             <p>
-                                <input type="checkbox" id="test02" />
-                                <label for="test02">Dagger</label>
+                                    <input type="checkbox" id="test01" />
+                                    <label for="test01">Candle Stick</label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" id="test03"/>
+                                    <input type="checkbox" id="test02" />
+                                    <label for="test02">Dagger</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test03" />
                                     <label for="test03">Lead Pipe</label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" id="test04"/>
+                                    <input type="checkbox" id="test04" />
                                     <label for="test04">Revolver</label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" id="test05"/>
+                                    <input type="checkbox" id="test05" />
                                     <label for="test05">Rope</label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" id="test06"/>
+                                    <input type="checkbox" id="test06" />
                                     <label for="test06">Spanner</label>
                                 </p>
                             </form>
                         </div>
                         <div id="ClueRad1" style="text-align: left; width: 50%; float: left">
-                        <label class="b-contain">
+                            <label class="b-contain">
 				        <span>Dining Room</span>
 				        <input type="radio" name="clueRoomRad" value="3" id="clueA">
 				        <div class="b-input"></div>
                         </label>
-                        <label class="b-contain">
+                            <label class="b-contain">
 				        <span>Library</span>
 				        <input type="radio" name="clueRoomRad" value="3" id="clueB">
 				        <div class="b-input"></div>
                         </label>
-                        <label class="b-contain">
+                            <label class="b-contain">
 				        <span>Lounge</span>
 				        <input type="radio" name="clueRoomRad" value="3" id="clueC">
 				        <div class="b-input"></div>
                         </label>
-                        <label class="b-contain">
+                            <label class="b-contain">
 				        <span>Kitchen</span>
 				        <input type="radio" name="clueRoomRad" value="3" id="clueD">
 				        <div class="b-input"></div>
                         </label>
                         </div>
                         <div id="ClueRad2" style="text-align: left; width: 50%; float: right">
-                        <label class="b-contain">
+                            <label class="b-contain">
 				        <span>Study</span>
 				        <input type="radio" name="clueRoomRad" value="3" id="clueE">
 				        <div class="b-input"></div>
                         </label>
-                        <label class="b-contain">
+                            <label class="b-contain">
 				        <span>Conservatory</span>
 				        <input type="radio" name="clueRoomRad" value="3" id="clueF">
 				        <div class="b-input"></div>
                         </label>
-                        <label class="b-contain">
+                            <label class="b-contain">
 				        <span>Hall</span>
 				        <input type="radio" name="clueRoomRad" value="3" id="clueG">
 				        <div class="b-input"></div>
                         </label>
-                        <label class="b-contain">
-				        <span>Billboard Room</span>
+                            <label class="b-contain">
+				        <span>Billiard Room</span>
 				        <input type="radio" name="clueRoomRad" value="3" id="clueH">
 				        <div class="b-input"></div>
                         </label>
-                        <label class="b-contain">
+                            <label class="b-contain">
 				        <span>Ballroom</span>
 				        <input type="radio" name="clueRoomRad" value="3" id="clueI">
 				        <div class="b-input"></div>
                         </label>
                         </div>
                         <br>
-                        <p>Suspect Row: <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="ClueSusRow"></p>
+                        <div id="ClueTxtBx" style="width: 100%; text-align: left;">
+                            <p>Suspect Row: <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="ClueSusRow"></p>
+                            <p>Weapon Row: <input type="number" maxlength="3" size="3" cols="3" class="NumberBoxes" id="ClueWeapRow"></p>
+                        </div>
                     </div>
                 </div>
                 <div id="other_right">
@@ -301,7 +307,8 @@
                     <!--Subject of 1,000 Words-->
                     <h2 onclick="showHide('thousandWords')"><img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="thousandWordsArrow"> &nbsp; Subject of 1,000 Words</h2>
                     <div id="thousandWords">
-                        <p>The module contains 5 displays that spell out 5 letter words. Determine if the word shown is in the manual table. Press <strong>YES</strong> if the word is in the munual table. If not press <strong>NO</strong>. Answer five times in a row correctly to solve the module. You will get a strike if one or more of the answers you sent are incorrect.</p>
+                        <p>The module contains 5 displays that spell out 5 letter words. Determine if the word shown is in the manual table. Press <strong>YES</strong> if the word is in the munual table. If not press <strong>NO</strong>. Answer five times
+                            in a row correctly to solve the module. You will get a strike if one or more of the answers you sent are incorrect.</p>
                         <p>For this manual helper, since the list is so long, the giant table have been replaced with a look-up function. Simply type the word in and recieve a &quot;YES&quot; or &quot;NO&quot; answer to relay to the diffuser.</p>
                         <p><strong>WARNING: </strong>Strikes will not be recorded until after all five words are answered. Even if the first word is answered incorrectly.</p>
                         <div class="autocomplete" style="width: 200px;">
@@ -316,7 +323,10 @@
                     <div id="divisibleNumbers">
                         <p><i>Who cares about divisibility rules, just use a calculator</i>.</p>
                         <p>This module consists of one screen at the top showing a number, another one at the bottom showing the current stage, a &quot; Yea &quot; button and a &quot; Nay &quot; button.</p>
-                        <p>TO solve the module, you have to press the &quot; Yea &quot; or &quot; Nay &quot; button through 3 stages. Go through the rulesand apply the first one that is relevant. Press the &quot; Yea &quot; button if the number is correct according to your answer, and press &quot; Nay &quot; if it's not. Getting a strike will reset the module back to stage 1 and generate new numbers. THe first number means the number generated first regardless of strikes and resets.</p>
+                        <p>TO solve the module, you have to press the &quot; Yea &quot; or &quot; Nay &quot; button through 3 stages. Go through the rulesand apply the first one that is relevant. Press the &quot; Yea &quot; button if the number is correct
+                            according to your answer, and press &quot; Nay &quot; if it's not. Getting a strike will reset the module back to stage 1 and generate new numbers. THe first number means the number generated first regardless of strikes and
+                            resets.
+                        </p>
                         <p>Please put the main number from the screen in the text box and select the rule that matches your bomb for the second number</p>
                         <p><i>If you do not wish to use the look-up function in this manual helper and want to follow the rules exactly as written on the manual, please see Appendix A: Tables to view the Divisibility Module.</i></p>
                         <p><u>Rules:</u></p>
@@ -359,26 +369,27 @@
                         <p class="resultBox" id="divisibleRes"></p>
                         <br>
                     </div>
-					
-					<!--Bone Apple Tea-->
-					<h2 onclick="showHide('boneAppleTea')"> <img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="boneAppleTeaArrow"> &nbsp; Subject of Bone Apple Tea </h2>
-					<div id="boneAppleTea">
-						<p><i>Ah yes, synonym rolls... Just like Grammar used to make.</i></p>
-						<ul>
-							<li>To deactivate the module, submit the character pair.</li>
-							<li>This is found out by taking the 2 displayed misspelled sentences, translating thrm into the correct sentence, and then finding the corresponding characters.</li>
-							<li>The top sentence applies to the left character, and the bottom to the right.</li>
-							<li>Note: &quot;chr.&quot; stands for &quot;Character.&quot;</li>
-						</ul>
-						<br><p>The List...</p>
-						<p><i>To begin, start serching for a phrase to find...</i></p>
-						<div class="autocomplete" style="width: 100%;">
+
+                    <!--Bone Apple Tea-->
+                    <h2 onclick="showHide('boneAppleTea')"> <img class="clickableArrows2" alt="Click to Show / Hide" src="images/closeArrow.png" id="boneAppleTeaArrow"> &nbsp; Subject of Bone Apple Tea </h2>
+                    <div id="boneAppleTea">
+                        <p><i>Ah yes, synonym rolls... Just like Grammar used to make.</i></p>
+                        <ul>
+                            <li>To deactivate the module, submit the character pair.</li>
+                            <li>This is found out by taking the 2 displayed misspelled sentences, translating thrm into the correct sentence, and then finding the corresponding characters.</li>
+                            <li>The top sentence applies to the left character, and the bottom to the right.</li>
+                            <li>Note: &quot;chr.&quot; stands for &quot;Character.&quot;</li>
+                        </ul>
+                        <br>
+                        <p>The List...</p>
+                        <p><i>To begin, start serching for a phrase to find...</i></p>
+                        <div class="autocomplete" style="width: 100%;">
                             <p>Phrase Text: &nbsp; <input type="text" size="9" cols="9" style="width: 40%;" class="NumberBoxes" id="BoneAppleTeaTextArea"> &nbsp; <button class="binaryGo" onclick="BoneAppleTeaGo()" id="BoneAppleTeaSub" value="submit">GO</button></p>
                         </div>
                         <br><br>
                         <p class="resultBox" id="BoneAppleTeaResponse"></p>
                         <br>
-					</div>
+                    </div>
                 </div>
                 <br>
                 <br>
@@ -399,18 +410,18 @@
             <h2>Sequence of Wires</h2>
             <p>In the section below, place the number of each colored wire occurances to keep track of how many of each wire was already seen before.</p>
             <div id="colors">
-                <p style="color: #ff0000"><i>RED </i>: &nbsp; &nbsp; <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="redbox"> &nbsp; <img src="images/upimg.png" alt="Increment RED Counter" class="arrowbuttons" onclick="modifyCounters('RED', 1)"> &nbsp; <img src="images/downimg.png" alt="Decrement RED Counter" class="arrowbuttons" onclick="modifyCounters('RED', 0)"></p>
-                <p style="color: #0000ff"><i>BLUE</i>: &nbsp; &nbsp; <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="bluebox"> &nbsp; <img src="images/upimg.png" alt="Increment BLUE Counter" class="arrowbuttons" onclick="modifyCounters('BLUE', 1)"> &nbsp; <img src="images/downimg.png" alt="Decrement BLUE Counter" class="arrowbuttons" onclick="modifyCounters('BLUE', 0)"></p>
-                <p style="color: #ffffff"><i>BLACK</i>: &nbsp; <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="blackbox"> &nbsp; <img src="images/upimg.png" alt="Increment BLACK Counter" class="arrowbuttons" onclick="modifyCounters('BLACK', 1)"> &nbsp; <img src="images/downimg.png" alt="Decrement BLACK Counter" class="arrowbuttons" onclick="modifyCounters('BLACK', 0)"></p>
+                <p style="color: #ff0000"><i>RED </i>: &nbsp; &nbsp; <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="redbox"> &nbsp; <img src="images/upimg.png" alt="Increment RED Counter" class="arrowbuttons" onclick="modifyCounters('RED', 1)">                    &nbsp; <img src="images/downimg.png" alt="Decrement RED Counter" class="arrowbuttons" onclick="modifyCounters('RED', 0)"></p>
+                <p style="color: #0000ff"><i>BLUE</i>: &nbsp; &nbsp; <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="bluebox"> &nbsp; <img src="images/upimg.png" alt="Increment BLUE Counter" class="arrowbuttons" onclick="modifyCounters('BLUE', 1)">                    &nbsp; <img src="images/downimg.png" alt="Decrement BLUE Counter" class="arrowbuttons" onclick="modifyCounters('BLUE', 0)"></p>
+                <p style="color: #ffffff"><i>BLACK</i>: &nbsp; <input type="number" value="0" maxlength="2" size="2" cols="2" class="NumberBoxes" id="blackbox"> &nbsp; <img src="images/upimg.png" alt="Increment BLACK Counter" class="arrowbuttons" onclick="modifyCounters('BLACK', 1)">                    &nbsp; <img src="images/downimg.png" alt="Decrement BLACK Counter" class="arrowbuttons" onclick="modifyCounters('BLACK', 0)"></p>
             </div>
-            
+
             <!--Password Helper-->
             <h2>Password</h2>
             <p>In the section below, start inputting a Password. A list of all valid passwords will come up.</p>
             <div class="autocomplete" style="width: 150px;">
                 <p>Word: &nbsp; <input type="text" maxlength="5" size="9" cols="9" class="NumberBoxes" id="wordPass"></p>
             </div>
-            
+
             <!--Complicated Wires Helper-->
             <h2>Complicated Wires</h2>
             <p>In the section below, refer to the table to decide what to do with each wire, since the venn-diagram provided in the manual is very hard to understand.</p>
@@ -566,7 +577,7 @@
             document.getElementById("divisibleNumBut").click();
         }
     });
-    
+
     var input4 = document.getElementById("CrazyTalkTextArea");
     input4.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
@@ -574,15 +585,15 @@
             document.getElementById("CrazyTalkSub").click();
         }
     });
-	
-	var input6 = document.getElementById("BoneAppleTeaTextArea");
+
+    var input6 = document.getElementById("BoneAppleTeaTextArea");
     input6.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             event.preventDefault();
             document.getElementById("BoneAppleTeaSub").click();
         }
     });
-    
+
     var input5 = document.getElementById("body");
     input4.addEventListener("keyup", function(event) {
         if (event.keyCode === 16 && event.keyCode == 17 && event.keyCode == 65) {

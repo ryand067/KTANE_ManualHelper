@@ -1,0 +1,151 @@
+<!--<!DOCTYPE html>-->
+<html>
+
+<head>
+    <!--Head Information such as Title and StyleSheet-->
+    <title>KTANE Clue Mod Helper</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/radioCss.css">
+    <link rel="Stylesheet" href="css/links.css">
+    <link rel="stylesheet" href="css/autocomplete.css">
+    <link rel="stylesheet" href="css/clue.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="scripts/mainScript.js"></script>
+    <script type="text/javascript" src="scripts/ClueTable.js"></script>
+</head>
+
+<body>
+    <h2 style="text-align: center;">KTANE Clue (Murder) Modded Module Helper</h2>
+    <h3>Suspects</h3>
+    <ul>
+        <li>If there is a lit indicator with label <i>TRN</i>, use row 5 to locate the suspects.</li>
+        <li>Otherwise, if the body was found in the Dining Room, use row 7.</li>
+        <li>Otherwise, if the bomb has 2 or more Stereo RCA ports, use row 8.</li>
+        <li>Otherwise, if there are no D batteries on the bomb, use row 2.</li>
+        <li>Otherwise, if the body was found in the Study, use row 4.</li>
+        <li>Otherwise, if there are 5 or more batteries, use row 9.</li>
+        <li>Otherwise, if there is an unlit indicator with label <i>FRQ</i>, use row 1.</li>
+        <li>Otherwise, if the body was found in the Conservatory, use row 3.</li>
+        <li>Otherwise, the suspects can be located using row 6.</li>
+    </ul>
+    <h3>Weapons</h3>
+    <ul>
+        <li>If the body was found in the Lounge, use row 3 to locate the weapons.</li>
+        <li>Otherwise, if there are 5 or more batteries, use row 1.</li>
+        <li>Otherwise, if the bomb has a serial port, use row 9.</li>
+        <li>Otherwise, if the body was found in the Billiard Room, use row 4.</li>
+        <li>Otherwise, if there are no batteries on the bomb, use row 6.</li>
+        <li>Otherwise, if there are no lit indicators on the bomb, use row 5.</li>
+        <li>Otherwise, if the body was found in the Hall, use row 7.</li>
+        <li>Otherwise, if the bomb has 2 or more Stereo RCA ports, use row 2.</li>
+        <li>Otherwise, the weapons can be located using row 8.</li>
+    </ul>
+    <h3>Locations</h3>
+    <h3>Locations</h3>
+    <table id="locTable">
+        <tr id="locTableRow1">
+            <th> </th>
+            <th id="locTableScarlett" onclick="toggleCellColor('locTableScarlett')">Miss Scarlett</th>
+            <th id="locTablePlum" onclick="toggleCellColor('locTablePlum')">Professor Plum</th>
+            <th id="locTablePeacock" onclick="toggleCellColor('locTablePeacock')">Mrs. Peacock</th>
+            <th id="locTableGreen" onclick="toggleCellColor('locTableGreen')">Reverend Green</th>
+            <th id="locTableMustard" onclick="toggleCellColor('locTableMustard')">Colonel Mustard</th>
+            <th id="locTableWhite" onclick="toggleCellColor('locTableWhite')">Mrs. White</th>
+        </tr>
+        <tr id="locTableRow2">
+            <th> </th>
+            <th id="locTableCandle" onclick="toggleCellColor('locTableCandle')">Candle Stick</th>
+            <th id="locTableDagger" onclick="toggleCellColor('locTableDagger')">Dagger</th>
+            <th id="locTablePipe" onclick="toggleCellColor('locTablePipe')">Lead Pipe</th>
+            <th id="locTableRevolver" onclick="toggleCellColor('locTableRevolver')">Revolver</th>
+            <th id="locTableRope" onclick="toggleCellColor('locTableRope')">Rope</th>
+            <th id="locTableSpanner" onclick="toggleCellColor('locTableSpanner')">Spanner</th>
+        </tr>
+        <tr id="locTableRow3">
+            <td id="locTableR1" onclick="toggleCellNumColor('locTableR1')">1</td>
+            <td id="locTable1A" onclick="toggleCellColor('locTable1A')">Dining Room</td>
+            <td id="locTable1B" onclick="toggleCellColor('locTable1B')">Library</td>
+            <td id="locTable1C" onclick="toggleCellColor('locTable1C')">Lounge</td>
+            <td id="locTable1D" onclick="toggleCellColor('locTable1D')">Kitchen</td>
+            <td id="locTable1E" onclick="toggleCellColor('locTable1E')">Study</td>
+            <td id="locTable1F" onclick="toggleCellColor('locTable1F')">Conservatory</td>
+        </tr>
+        <tr id="locTableRow4">
+            <td id="locTableR2" onclick="toggleCellNumColor('locTableR2')">2</td>
+            <td id="locTable2A" onclick="toggleCellColor('locTable2A')">Study</td>
+            <td id="locTable2B" onclick="toggleCellColor('locTable2B')">Hall</td>
+            <td id="locTable2C" onclick="toggleCellColor('locTable2C')">Billiard Room</td>
+            <td id="locTable2D" onclick="toggleCellColor('locTable2D')">Lounge</td>
+            <td id="locTable2E" onclick="toggleCellColor('locTable2E')">Kitchen</td>
+            <td id="locTable2F" onclick="toggleCellColor('locTable2F')">Library</td>
+        </tr>
+        <tr id="locTableRow5">
+            <td id="locTableR3" onclick="toggleCellNumColor('locTableR3')">3</td>
+            <td id="locTable3A" onclick="toggleCellColor('locTable3A')">Kitchen</td>
+            <td id="locTable3B" onclick="toggleCellColor('locTable3B')">Billiard Room</td>
+            <td id="locTable3C" onclick="toggleCellColor('locTable3C')">Ballroom</td>
+            <td id="locTable3D" onclick="toggleCellColor('locTable3D')">Library</td>
+            <td id="locTable3E" onclick="toggleCellColor('locTable3E')">Conservatory</td>
+            <td id="locTable3F" onclick="toggleCellColor('locTable3F')">Dining Room</td>
+        </tr>
+        <tr id="locTableRow6">
+            <td id="locTableR4" onclick="toggleCellNumColor('locTableR4')">4</td>
+            <td id="locTable4A" onclick="toggleCellColor('locTable4A')">Lounge</td>
+            <td id="locTable4B" onclick="toggleCellColor('locTable4B')">Ballroom</td>
+            <td id="locTable4C" onclick="toggleCellColor('locTable4C')">Dining Room</td>
+            <td id="locTable4D" onclick="toggleCellColor('locTable4D')">Conservatory</td>
+            <td id="locTable4E" onclick="toggleCellColor('locTable4E')">Hall</td>
+            <td id="locTable4F" onclick="toggleCellColor('locTable4F')">Kitchen</td>
+        </tr>
+        <tr id="locTableRow7">
+            <td id="locTableR5" onclick="toggleCellNumColor('locTableR5')">5</td>
+            <td id="locTable5A" onclick="toggleCellColor('locTable5A')">Billiard Room</td>
+            <td id="locTable5B" onclick="toggleCellColor('locTable5B')">Kitchen</td>
+            <td id="locTable5C" onclick="toggleCellColor('locTable5C')">Study</td>
+            <td id="locTable5D" onclick="toggleCellColor('locTable5D')">Ballroom</td>
+            <td id="locTable5E" onclick="toggleCellColor('locTable5E')">Dining Room</td>
+            <td id="locTable5F" onclick="toggleCellColor('locTable5F')">Hall</td>
+        </tr>
+        <tr id="locTableRow8">
+            <td id="locTableR6" onclick="toggleCellNumColor('locTableR6')">6</td>
+            <td id="locTable6A" onclick="toggleCellColor('locTable6A')">Conservatory</td>
+            <td id="locTable6B" onclick="toggleCellColor('locTable6B')">Lounge</td>
+            <td id="locTable6C" onclick="toggleCellColor('locTable6C')">Library</td>
+            <td id="locTable6D" onclick="toggleCellColor('locTable6D')">Study</td>
+            <td id="locTable6E" onclick="toggleCellColor('locTable6E')">Billiard Room</td>
+            <td id="locTable6F" onclick="toggleCellColor('locTable6F')">Ballroom</td>
+        </tr>
+        <tr id="locTableRow9">
+            <td id="locTableR7" onclick="toggleCellNumColor('locTableR7')">7</td>
+            <td id="locTable7A" onclick="toggleCellColor('locTable7A')">Ballroom</td>
+            <td id="locTable7B" onclick="toggleCellColor('locTable7B')">Conservatory</td>
+            <td id="locTable7C" onclick="toggleCellColor('locTable7C')">Kitchen</td>
+            <td id="locTable7D" onclick="toggleCellColor('locTable7D')">Hall</td>
+            <td id="locTable7E" onclick="toggleCellColor('locTable7E')">Library</td>
+            <td id="locTable7F" onclick="toggleCellColor('locTable7F')">Study</td>
+        </tr>
+        <tr id="locTableRow10">
+            <td id="locTableR8" onclick="toggleCellNumColor('locTableR8')">8</td>
+            <td id="locTable8A" onclick="toggleCellColor('locTable8A')">Hall</td>
+            <td id="locTable8B" onclick="toggleCellColor('locTable8B')">Study</td>
+            <td id="locTable8C" onclick="toggleCellColor('locTable8C')">Conservatory</td>
+            <td id="locTable8D" onclick="toggleCellColor('locTable8D')">Dining Room</td>
+            <td id="locTable8E" onclick="toggleCellColor('locTable8E')">Lounge</td>
+            <td id="locTable8F" onclick="toggleCellColor('locTable8F')">Billiard Room</td>
+        </tr>
+        <tr id="locTableRow11">
+            <td id="locTableR9" onclick="toggleCellNumColor('locTableR9')">9</td>
+            <td id="locTable9A" onclick="toggleCellColor('locTable9A')">Library</td>
+            <td id="locTable9B" onclick="toggleCellColor('locTable9B')">Dining Room</td>
+            <td id="locTable9C" onclick="toggleCellColor('locTable9C')">Hall</td>
+            <td id="locTable9D" onclick="toggleCellColor('locTable9D')">Billiard Room</td>
+            <td id="locTable9E" onclick="toggleCellColor('locTable9E')">Ballroom</td>
+            <td id="locTable9F" onclick="toggleCellColor('locTable9F')">Lounge</td>
+        </tr>
+    </table>
+    </div>
+
+</body>
+
+</html>
