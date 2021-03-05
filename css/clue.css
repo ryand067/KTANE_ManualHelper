@@ -7,3 +7,7 @@
 #locTable th {
     color: #0000ff;
 }
+
+#tableD1 {
+    display: none;
+}
