@@ -22,6 +22,8 @@ class boneAppleTeaItem {
     }
 };
 
+var previousAdd = "";
+
 var passes = ["about", "after", "again", "below", "could", "every", "first", "found", "great", "house", "large", "learn", "never", "other", "place", "plant", "point", "right", "small", "sound", "spell",
     "still", "study", "their", "there", "these", "thing", "think", "three", "water", "where", "which", "world", "would", "write"
 ];
@@ -59,7 +61,7 @@ var boneAppleTeaPhrases = [new boneAppleTeaItem("BON APPETIT", '0'), new boneApp
 
 //Variable Array to hold all of the words needed for the 1,000 Words Module Helper
 var wordsFor5Words = [];
-var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC", "tableD", "boneAppleTea", "Clue"];
+var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC", "tableD", "tableE", "boneAppleTea", "Clue"];
 var clueFields = ["test1", "test2", "test3", "test4", "test5", "test6", "test01", "test02", "test03", "test04", "test05", "test06"];
 
 //Function to increase and decrease number of each color wires in Sequences
@@ -157,6 +159,11 @@ function additionGo() {
 
     //Get input and output elements
     var input = document.getElementById('additionTextArea').value.toUpperCase();
+
+    if (input != "") {
+        previousAdd = input;
+    }
+
     var lines = input.split('\n');
     document.getElementById('additionTextArea').value = "";
     var output = document.getElementById('additonResponse');
@@ -190,6 +197,10 @@ function additionGo() {
         output.innerHTML += "AN ERROR OCCURED";
     }
     document.getElementById("additionTextArea").focus();
+}
+
+function resetAddition() {
+    document.getElementById('additionTextArea').value = previousAdd;
 }
 
 //Crazy Talk Function
