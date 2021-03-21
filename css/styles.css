@@ -1,4 +1,14 @@
 /*Main Body Style*/
+::selection {
+    background-color: #FF6700;
+    color: #007FFF;
+}
+
+::-moz-selection {
+    background-color: #FF6700;
+    color: #007FFF;
+}
+
 body {
     background-color: #000000;
     font-family: 'Balsamiq Sans', cursive, sans-serif;
@@ -48,6 +58,11 @@ ul {
     border-radius: 5px;
 }
 
+input.NumberBoxes:hover {
+    border-color: #FFF700;
+    border-width: 3.5px;
+}
+
 .arrowbuttons {
     max-width: 8%;
     height: auto;
@@ -68,6 +83,18 @@ ul {
     height: auto;
     display: inline-block;
     overflow: auto;
+}
+
+.itemSection {
+    cursor: pointer;
+}
+
+p.itemSection:hover {
+    color: #FF6700;
+}
+
+h2.itemSection:hover {
+    color: #FF6700;
 }
 
 /*Table Styles: Particularly for the 'Complicated Wires' Helper*/
@@ -150,6 +177,11 @@ iframe {
     border-color: #c0c0c0;
     border-bottom-width: medium;
     border-radius: 5px;
+}
+
+textarea.textareaClass:hover {
+    border-color: #FFF700;
+    border-width: 3.5px;
 }
 
 .leftAlignRad {
