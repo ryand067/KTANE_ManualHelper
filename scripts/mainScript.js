@@ -62,7 +62,6 @@ var boneAppleTeaPhrases = [new boneAppleTeaItem("BON APPETIT", '0'), new boneApp
 //Variable Array to hold all of the words needed for the 1,000 Words Module Helper
 var wordsFor5Words = [];
 var divs = ["addition", "chickenNuggets", "crazyTalk", "thousandWords", "modulo", "divisibleNumbers", "jackolantern", "tableA", "tableB", "tableC", "tableD", "tableE", "boneAppleTea", "Clue"];
-var clueFields = ["test1", "test2", "test3", "test4", "test5", "test6", "test01", "test02", "test03", "test04", "test05", "test06"];
 
 //Function to increase and decrease number of each color wires in Sequences
 function modifyCounters(color, direction) {
@@ -214,9 +213,9 @@ function CrazyTalkGo() {
     //If the search finds it, report to the user that it was found and the up and down values. Otherwise report that it wasn't
     var bsRes = search(CrazyTalkWords, input);
     if (bsRes === -1) {
-        output.innerHTML = "CrazyTalk <i>" + input + "</i> not found!";
+        output.innerHTML = "CrazyTalk &quot;<i>" + input + "</i>&quot; not found!";
     } else {
-        output.innerHTML = "CrazyTalk <i>" + input + "</i> Found!<br> &emsp; DOWN: " + CrazyTalkWords[bsRes].up + "<br> &emsp; UP: " + CrazyTalkWords[bsRes].down;
+        output.innerHTML = "CrazyTalk &quot;<i>" + input + "</i>&quot; Found!<br> &emsp; DOWN: " + CrazyTalkWords[bsRes].up + "<br> &emsp; UP: " + CrazyTalkWords[bsRes].down;
     }
 }
 
@@ -231,9 +230,9 @@ function BoneAppleTeaGo() {
     //If the search finds it, report to the user that it was found and the up and down values. Otherwise report that it wasn't
     var bsRes = search(boneAppleTeaPhrases, input);
     if (bsRes === -1) {
-        output.innerHTML = "Phrase <i>" + input + "</i> not found!";
+        output.innerHTML = "Phrase &quot;<i>" + input + "</i>&quot; <b><u>NOT</u></b> Found!";
     } else {
-        output.innerHTML = "Phrase <i>" + input + "</i> Found!<br> &emsp; Character: " + boneAppleTeaPhrases[bsRes].chara;
+        output.innerHTML = "Phrase &quot;<i>" + input + "</i>&quot; Found!<br> &emsp; Character: " + boneAppleTeaPhrases[bsRes].chara;
     }
 }
 
@@ -250,9 +249,9 @@ function findWord() {
 
     //If the binarysearch finds it, report to the user that it was found. Otherwise, report that it wasn't
     if (binarySearch(wordsFor5Words, input) === -1) {
-        output.innerHTML = input + " NOT FOUND";
+        output.innerHTML = "&quot;" + input + "&quot; <b><u>NOT</u></b> Found";
     } else {
-        output.innerHTML = input + " FOUND!!";
+        output.innerHTML = "&quot;" + input + "&quot; FOUND!!";
     }
     document.getElementById('word5').focus();
 }
@@ -320,9 +319,9 @@ function divisibleNumGo() {
 
     //Display the results
     if (a % b === 0) {
-        output.innerHTML = "YEA";
+        output.innerHTML = "YEA / YES";
     } else {
-        output.innerHTML = "NAY";
+        output.innerHTML = "NAY / NO";
     }
 
     //Return focus to the first textbox
@@ -353,8 +352,6 @@ function clr_fields() {
     document.getElementById("CrazyTalkTextArea").value = "";
     document.getElementById("BoneAppleTeaTextArea").value = "";
     document.getElementById('chickNugs').value = "";
-    document.getElementById('ClueSusRow').value = "";
-    document.getElementById('ClueWeapRow').value = "";
     document.getElementById('chickNugsRes').innerHTML = "";
     document.getElementById('additionTextArea').value = "";
     document.getElementById('additonResponse').innerHTML = "";
@@ -362,8 +359,6 @@ function clr_fields() {
     document.getElementById('words5resp').innerHTML = "";
     document.getElementById('chickyFirst').checked = true;
     document.getElementById('divNumRad3').checked = true;
-    document.getElementById('clueA').checked = true;
-    document.getElementById('clueA').checked = false;
     document.getElementById('chickyAll').checked = false;
     document.getElementById('moduloN').value = "";
     document.getElementById('moduloM').value = "";
@@ -376,11 +371,6 @@ function clr_fields() {
     //Hide All Other Mods
     for (var a = 0; a < divs.length; a++) {
         hideDiv(divs[a]);
-    }
-
-    //Clear Clue Fields
-    for (var a = 0; a < clueFields.length; a++) {
-        document.getElementById(clueFields[a]).checked = false;
     }
 }
 

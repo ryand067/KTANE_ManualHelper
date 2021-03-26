@@ -1,12 +1,13 @@
 /*Main Body Style*/
+
 ::selection {
-    background-color: #FF6700;
-    color: #007FFF;
+    background-color: #FFFF31;
+    color: #000080;
 }
 
 ::-moz-selection {
-    background-color: #FF6700;
-    color: #007FFF;
+    background-color: #FFFF31;
+    color: #000080;
 }
 
 body {
@@ -17,10 +18,12 @@ body {
     font-size: 100%;
 }
 
+
 /*Heading Styles
 	-H1: Section Headings
 	-H2: Helper Names Headings
 */
+
 h1 {
     color: #ffff00;
     text-align: center;
@@ -36,7 +39,9 @@ ul {
     text-align: left;
 }
 
+
 /*Right side of the page: The Helper Modules Styles*/
+
 #container {
     text-align: center;
     display: block;
@@ -49,7 +54,9 @@ ul {
     text-align: left;
 }
 
+
 /*Styles for the objects associated with the 'Sequence of Wires' Helper*/
+
 .NumberBoxes {
     background-color: #575757;
     color: rgba(211, 211, 54, 0.69);
@@ -60,6 +67,11 @@ ul {
 
 input.NumberBoxes:hover {
     border-color: #FFF700;
+    border-width: 3.5px;
+}
+
+input.NumberBoxes:focus {
+    border-color: #FF6700;
     border-width: 3.5px;
 }
 
@@ -97,7 +109,9 @@ h2.itemSection:hover {
     color: #FF6700;
 }
 
+
 /*Table Styles: Particularly for the 'Complicated Wires' Helper*/
+
 table,
 th,
 td {
@@ -110,7 +124,9 @@ td {
     display: inline-block;
 }
 
+
 /*Main Original Manual Styles*/
+
 #manual {
     text-align: center;
     display: block;
@@ -120,7 +136,9 @@ td {
     height: 100vh;
 }
 
+
 /*CrazyTalk Sub-Manual*/
+
 #tableA,
 #tableB {
     text-align: center;
@@ -135,11 +153,13 @@ iframe {
     height: 100%;
 }
 
+
 /*Styles for the Other Modules and Appendixes
 	-other: Appendixes and Left and Right Screens for Modded Modules
 	-other_left: left-hand side of Modded Modules including Addition and CrazyTalk
 	-other_right: right-hand side of the Modded Modules including 1,000 Words
 */
+
 #other {
     /*background-color: #000080;*/
     display: inline-block;
@@ -161,7 +181,9 @@ iframe {
     padding: 0.5%;
 }
 
+
 /*Styles for the returned results from the Addition and 1,000 Words Modules*/
+
 .resultBox {
     color: rgb(180, 180, 20);
     border: solid;
@@ -169,7 +191,9 @@ iframe {
     text-align: center;
 }
 
+
 /*Text Area Styles for the 'Addition' and 'Memory' Modules*/
+
 .textareaClass {
     background-color: #575757;
     color: rgba(211, 211, 54, 0.69);
@@ -184,11 +208,18 @@ textarea.textareaClass:hover {
     border-width: 3.5px;
 }
 
+textarea.textareaClass:focus {
+    border-color: #FF6700;
+    border-width: 3.5px;
+}
+
 .leftAlignRad {
     text-align: left;
 }
 
+
 /*Footer Styles*/
+
 #footer {
     left: 0;
     bottom: 0;
@@ -200,7 +231,9 @@ textarea.textareaClass:hover {
     margin: 0.25%;
 }
 
+
 /*Clear Button Styles*/
+
 .BUTTON_CLEAR {
     background: #FFF700;
     -webkit-border-radius: 100px;
@@ -230,7 +263,9 @@ textarea.textareaClass:hover {
     text-decoration: none;
 }
 
+
 /*Modules GO buttons Styles*/
+
 .binaryGo {
     box-shadow: inset 0px 1px 3px 0px #91b8b3;
     background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
@@ -258,26 +293,25 @@ textarea.textareaClass:hover {
 }
 
 .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: rgba(255, 103, 0, 0.85);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(255, 103, 0, 0.85);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
 }
 
 .tooltip:hover {
@@ -285,5 +319,5 @@ textarea.textareaClass:hover {
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+    visibility: visible;
 }
