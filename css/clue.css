@@ -12,3 +12,13 @@
 #tableD1 {
     display: none;
 }
+
+#locTable th:hover {
+	background-color: #ffff00;
+	color: #8F00FF
+}
+
+#locTable td:hover {
+	background-color: #ffff00;
+	color: black;
+}
