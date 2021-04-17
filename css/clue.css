@@ -14,11 +14,9 @@
 }
 
 #locTable th:hover {
-	background-color: #ffff00;
-	color: #8F00FF
+	color: #FFFF00
 }
 
 #locTable td:hover {
-	background-color: #ffff00;
-	color: black;
+	color: #007FFF;
 }
